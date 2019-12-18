@@ -1,0 +1,27 @@
+.examples-container {
+  max-width: 80vw;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  margin: 0 auto; }
+  .examples-container .scrollable-container {
+    max-height: 40vh;
+    width: 30vw;
+    max-width: 30vw;
+    padding: 20px 2vw;
+    border: 1px solid lightgray; }
+    .examples-container .scrollable-container .scrollable-content {
+      min-height: 80vh;
+      position: relative;
+      justify-content: center;
+      display: flex; }
+      .examples-container .scrollable-container .scrollable-content .top {
+        position: absolute;
+        top: 5px; }
+      .examples-container .scrollable-container .scrollable-content span {
+        position: absolute;
+        top: 50%; }
+      .examples-container .scrollable-container .scrollable-content .bottom {
+        position: absolute;
+        bottom: 5px; }
+
