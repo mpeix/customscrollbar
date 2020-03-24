@@ -1,0 +1,40 @@
+body{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.scrollable-container{
+    max-height: 40vh;
+    border: 1px solid lightgray;        
+    overflow-y: scroll;
+}
+
+.scrollable-container .scrollable-content{
+    min-height: 80vh;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+.scrollable-container .scrollable-content .top{
+    position: absolute;
+    top:5px;
+}
+
+.scrollable-container .scrollable-content span{
+    position: absolute;
+    top: 50%;
+}
+
+.scrollable-container .scrollable-content .bottom{
+    position: absolute;
+    bottom:5px;
+}
+
+#example-1-width{
+    width: 80px;
+}
+
+.color-input{
+    height: 38px;
+    padding: 8px;
+}

@@ -9,7 +9,8 @@ body{
     .scrollable-container{
         max-height: 40vh;
         border: 1px solid lightgray;        
-        
+        overflow-y: scroll;
+
         .scrollable-content{
             min-height: 80vh;
             position: relative;

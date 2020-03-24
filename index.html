@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Demo</title>
+  <meta name="description" content="Javascript Scroll Utility. Style scroll in any div. Cross - browsser compatibility">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+    <header>
+      <h1>Page title</h1>
+    </header>
+
+    <main>
+      <h2>Find below the scrollbar examples.</h2>
+    </main>
+
+    <section class="examples-container ui stackable one column centered grid">
+      <div class="column">
+          <div id="scroll-container-example-1" class='scrollable-container ui segment row'>
+              <div class="scrollable-content">
+                <p class="top">top</p>
+                <span>...</span>
+                <p class="bottom">bottom</p>
+              </div>                
+          </div>
+          <div class="ui vertical segment row">
+            <p>Set scroll witdh:</p>
+            <div id="example-1-width-container" class="ui right labeled input">
+              <input type="number" id="example-1-width" value="5" onchange="runScroll()">
+              <div class="ui basic label"><text>px</text></div>
+            </div>
+            <button id="e1-minus-width" class="ui circular basic icon button" onclick="changeWidth('substract')">
+                <i class="minus icon"></i>
+            </button>
+            <button id="e1-plus-width" class="ui circular basic icon button" onclick="changeWidth('add')">
+              <i class="plus icon pointing label"></i>
+            </button>
+          </div>
+          <div class="color-selector ui vertical segment row">
+            <p>Select scrollbar color: &nbsp;</p>
+            <div class="ui input">
+              <input class="color-input" type="color" id="example-scrollTrack-color" value="#ff0000" onchange="runScroll()">
+            </div>
+          </div>
+          <div class="color-selector ui vertical segment row">
+            <p>Select scroll thumb color: &nbsp;</p>
+            <div class="ui input">
+              <input class="color-input" type="color" id="example-scrollThumb-color" value="#ff0000" onchange="runScroll()">
+            </div>
+          </div>
+          <div class="generated-code column">
+          </div>
+      </div>
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <script src="./scripts/main.js"></script>
+
+    <script>
+      function changeWidth(operation){
+        var element = $('#example-1-width');
+        var currentValue = parseInt(element.val());
+        var newValue = operation === 'add' ? currentValue + 1 : currentValue - 1;
+        element.val(newValue);
+      };
+  
+      function runScroll(propChanged, newValue){
+        debugger;
+        var newWidth = $('#example-1-width').val();
+        var newTrackColor = $('#example-scrollTrack-color').val()
+        var scrollThumbColor = $('#example-scrollThumb-color').val();
+        var scrollObject = {
+          selector: '#scroll-container-example-1',
+          scrollWidth: newWidth,
+          scrollTrackColor: newTrackColor,
+          scrollThumbBackground:scrollThumbColor
+        }
+        
+        MyScroll.run(scrollObject);
+      };
+    </script>
+</body>
+</html>
