@@ -2,15 +2,15 @@ import Browser from '../../enums/browsers';
 import {detectBrowser} from './browserUtils';
 
 const run = (options) =>{
-  const {selector, scrollWidth, scrollTrackColor, scrollThumbBackground, scrollThumbHoverBackground,
+  const {selector, scrollWidth, scrollTrackColor, scrollThumbColor, scrollThumbHoverColor,
     useArrows} = options;
 
     let optionsOrDefaults = {
       selector: selector || '',
       scrollWidth: scrollWidth || 5,
-      scrollTrackColor: scrollTrackColor || '#888',       
-      scrollThumbBackground: scrollThumbBackground || 'blue',
-      scrollThumbHoverBackground: scrollThumbHoverBackground || 'red',
+      scrollTrackColor: scrollTrackColor || '#f5f5f6',       
+      scrollThumbColor: scrollThumbColor || '#4f5b62',
+      scrollThumbHoverColor: scrollThumbHoverColor || '#000a12',
       useArrows:useArrows || false,
     };
     
@@ -21,10 +21,12 @@ const run = (options) =>{
       styleTag.id = "my-scroll-style";
       styleTag.type = "text/css";
     }
+    debugger;
+    styleTag.innerText = '';
     let css = createStylesheetString(optionsOrDefaults);
     console.log(css);
-    styleTag.innerText = css;
-    //styleTag.appendChild(document.createTextNode(css))
+    
+    styleTag.appendChild(document.createTextNode(css))
     document.head.appendChild(styleTag);
 }
 
@@ -37,19 +39,19 @@ const createStylesheetString = (options) =>{
       background:${options.scrollTrackColor};
     }
     ${options.selector}::-webkit-scrollbar-thumb{
-      background:${options.scrollThumbBackground};
+      background:${options.scrollThumbColor};
     }
     ${options.selector}::-webkit-scrollbar-thumb:hover{
-      background:${options.scrollThumbHoverBackground};
+      background:${options.scrollThumbHoverColor};
     }
     ${options.selector}{
-      scrollbar-face-color:${options.scrollThumbBackground};
-      scrollbar-arrow-color:#05B7FF;
+      scrollbar-face-color:${options.scrollThumbColor};
+      scrollbar-arrow-color:pink;
       scrollbar-track-color:${options.scrollTrackColor};
-      scrollbar-shadow-color:#05B7FF;
-      scrollbar-highlight-color:#05B7FF;
-      scrollbar-3dlight-color:#808080;
-      scrollbar-darkshadow-Color:#202020;
+      scrollbar-shadow-color:${options.scrollThumbColor};
+      scrollbar-highlight-color:green;
+      scrollbar-3dlight-color:blue;
+      scrollbar-darkshadow-Color:red;
     }
     ${options.selector}{
       scrollbar-color: ${options.scrollThumbBackground} ${options.scrollTrackColor};

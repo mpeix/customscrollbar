@@ -35,6 +35,6 @@ body{
 }
 
 .color-input{
-    height: 38px;
-    padding: 8px;
+    height: 38px !important;
+    padding: 2px !important;
 }

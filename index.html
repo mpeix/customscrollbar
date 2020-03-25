@@ -32,7 +32,7 @@
           <div class="ui vertical segment row">
             <p>Set scroll witdh:</p>
             <div id="example-1-width-container" class="ui right labeled input">
-              <input type="number" id="example-1-width" value="5" onchange="runScroll()">
+              <input class="trigger-scroll" type="number" id="example-1-width" value="5">
               <div class="ui basic label"><text>px</text></div>
             </div>
             <button id="e1-minus-width" class="ui circular basic icon button" onclick="changeWidth('substract')">
@@ -45,16 +45,23 @@
           <div class="color-selector ui vertical segment row">
             <p>Select scrollbar color: &nbsp;</p>
             <div class="ui input">
-              <input class="color-input" type="color" id="example-scrollTrack-color" value="#ff0000" onchange="runScroll()">
+              <input class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6">
             </div>
           </div>
           <div class="color-selector ui vertical segment row">
             <p>Select scroll thumb color: &nbsp;</p>
             <div class="ui input">
-              <input class="color-input" type="color" id="example-scrollThumb-color" value="#ff0000" onchange="runScroll()">
+              <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62">
             </div>
           </div>
-          <div class="generated-code column">
+          <div class="color-selector ui vertical segment row">
+            <p>Select scroll thumb hover color: &nbsp;</p>
+            <div class="ui input">
+              <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12">
+            </div>
+          </div>
+          <div id="generated-code-container" class="column">
+            <p></p>
           </div>
       </div>
     </section>
@@ -64,28 +71,50 @@
 
     <script src="./scripts/main.js"></script>
 
-    <script>
+    <script type="text/javascript">
+      
+      var changeElmements = document.getElementsByClassName('trigger-scroll')
+      for (var i = 0; i < changeElmements.length; i++) {
+        changeElmements[i].addEventListener('change', runScroll);
+      }
+
       function changeWidth(operation){
         var element = $('#example-1-width');
         var currentValue = parseInt(element.val());
         var newValue = operation === 'add' ? currentValue + 1 : currentValue - 1;
         element.val(newValue);
+        runScroll();
       };
   
-      function runScroll(propChanged, newValue){
-        debugger;
+      function runScroll(){
+        console.log('... runScroll ...');
         var newWidth = $('#example-1-width').val();
-        var newTrackColor = $('#example-scrollTrack-color').val()
-        var scrollThumbColor = $('#example-scrollThumb-color').val();
+        var newTrackColor = $('#example-scroll-track-color').val()
+        var scrollThumbColor = $('#example-scroll-thumb-color').val();
+        var scrollThumbHoverColor = $('#example-scroll-thumb-hover-color').val();
         var scrollObject = {
           selector: '#scroll-container-example-1',
           scrollWidth: newWidth,
           scrollTrackColor: newTrackColor,
-          scrollThumbBackground:scrollThumbColor
+          scrollThumbColor: scrollThumbColor,
+          scrollThumbHoverColor: scrollThumbHoverColor
         }
         
         MyScroll.run(scrollObject);
+
+        var script = "MyScroll.run({"
+        script +="selector: " + selector + ",";
+        script +="scrollWidth: " + scrollWidth + ",";
+        script +="scrollWidth: "+ newTrackColor + ",";
+        script +="scrollThumbColor: " + scrollThumbColor+ ",";
+        script +="scrollThumbHoverColor: " + scrollThumbHoverColor;
+        script +="})";
+        $('#generated-code-container p').text(script);
       };
+
+      $( document ).ready(function() {
+        MyScroll.run({});
+      });
     </script>
 </body>
 </html>
