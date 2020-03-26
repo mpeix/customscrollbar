@@ -1,8 +1,30 @@
-body{
-    max-width: 350px;
-    margin: 0 auto;
+.flex-center{
+    display: flex;
+    justify-content: center;
 }
 
+header{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+footer{
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+section{
+    max-width: 350px;
+    margin: 0 auto !important;
+    padding-top: 50px !important;
+}
+
+#generator-section-container{
+    background-color: #F5F5F6;
+}
 .scrollable-container{
     max-height: 40vh;
     border: 1px solid lightgray;        
@@ -12,8 +34,6 @@ body{
 .scrollable-container .scrollable-content{
     min-height: 80vh;
     position: relative;
-    justify-content: center;
-    display: flex;
 }
 .scrollable-container .scrollable-content .top{
     position: absolute;
@@ -34,7 +54,34 @@ body{
     width: 80px;
 }
 
+.disclaimer {
+    padding-top: 15px;
+}
+
 .color-input{
     height: 38px !important;
     padding: 2px !important;
+}
+
+.string{
+    color:#008C79;
+}
+
+.number{
+    color:blue;
+}
+.color{
+    color:#4f5b62;
+}
+.paddingl15{
+    padding-left: 15px;
+}
+.paddingl30{
+    padding-left: 30px;
+}
+.paddingl45{
+    padding-left: 45px;
+}
+.function{
+    color:#0288d1;
 }

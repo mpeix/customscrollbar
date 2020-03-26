@@ -13,108 +13,197 @@
 
 <body>
     <header>
-      <h1>Page title</h1>
+      <h1>MyScroll</h1>
+      <h2>Discover <em>MyScroll</em>, an easy tool to customize your scrollbars</h2>
     </header>
 
-    <main>
-      <h2>Find below the scrollbar examples.</h2>
-    </main>
+    <main>     
+      <section class="ui stackable one column centered grid">
+        <div class="segment column"> 
+          <p>Here you will find a demo tool with sample snippets to made your integration with <em>MyScroll</em> easear.</p>
+          <p>But,</p> 
+          <p class="paddingl15">... before ...</p>
+          <p class="paddingl30"><b>I will tell you how to use it!!!</b></p>
+          <p class="paddingl45">only in two steps</p>
+          <div class="ui steps vertical">
+            <div class="completed step">              
+              <div class="content">
+                <div class="title">1 - Import</div>
+                <div class="description">Import code from cdn or take main.js and add it into your project</div>
+                <div class="base-code">
+                </div>
+              </div>
+            </div>
+            <div class="completed step">              
+              <div class="content">
+                <div class="title">2 - Run</div>
+                <div class="description">
+                  To customize an scroll bar simply type MyScroll.run inside script tag in your html document.
+                  run function receive an options object, you will need to fill it with desired values.
+                </div>
+                <div id="generated-code-container" class="column ui segment">
+                  <div class="ui top right attached label">Code:&nbsp;<em>javascript</em></div>
+                    <div class="code javascript">
+                      <div class="base-code">
+                        MyScroll.<span class='function'>run</span>({ </span><br>
+                        <span class='base-code paddingl15'>selector: </span> <span class='string'> '#your-scrollable-container'</span>, <br>
+                        <span class='base-code paddingl15'>scrollWidth: </span><span class='number'> 5 </span>,<br>
+                        <span class='base-code paddingl15'>scrollTrackColor: </span><span class='color'> '#f5f5f6' </span>,<br>
+                        <span class='base-code paddingl15'>scrollThumbColor: </span><span class='color'> '#4f5b62'</span>,<br>
+                        <span class='base-code paddingl15'>scrollThumbHoverColor: </span><span class='color'> scrollThumbHoverColor </span><br>
+                        });
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>           
+        </div> 
+        <div class="segment column"> 
+          <p>I have tested the code in the following browsers:</p>
+          <div class="ui middle aligned animated list">
+            <div class="item">
+              <i class="chrome icon"></i>
+              <div class="content">
+                <div class="header">Chrome</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="internet explorer icon"></i>
+              <div class="content">
+                <div class="header">Internet Explorer (11)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="generator-section-container">
+        <section class="examples-container ui stackable one column centered grid">
+          <h2>Script generator tool</h2>
+          <div class="column">
+              <div id="scroll-container-example-1" class='scrollable-container ui segment row'>
+                  <div class="scrollable-content flex-center">
+                    <p class="top">top</p>
+                    <span>...</span>
+                    <p class="bottom">bottom</p>
+                  </div>                
+              </div>
+              <div class="ui vertical segment row">
+                <h3>Set scroll bar witdh</h3>
+                <div id="example-1-width-container" class="ui right labeled input">
+                  <input class="trigger-scroll" type="number" id="example-1-width" value="5">
+                  <div class="ui basic label"><text>px</text></div>
+                </div>
+                <button id="e1-minus-width" class="ui circular basic icon button" onclick="changeWidth('substract')">
+                    <i class="minus icon"></i>
+                </button>
+                <button id="e1-plus-width" class="ui circular basic icon button" onclick="changeWidth('add')">
+                  <i class="plus icon pointing label"></i>
+                </button>
 
-    <section class="examples-container ui stackable one column centered grid">
-      <div class="column">
-          <div id="scroll-container-example-1" class='scrollable-container ui segment row'>
-              <div class="scrollable-content">
-                <p class="top">top</p>
-                <span>...</span>
-                <p class="bottom">bottom</p>
-              </div>                
+                <div class="disclaimer row">
+                  <p>* <em>Scroll bar with is not supported in Internet explorer</em></p>
+                </div>
+              </div>
+              <div class="color-selector ui vertical segment row">
+                <h3>Select scrollbar color</h3>
+                <div class="ui input">
+                  <input class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6">
+                </div>
+              </div>
+              <div class="color-selector ui vertical segment row">
+                <h3>Select scroll thumb color</h3>
+                <div class="ui input">
+                  <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62">
+                </div>
+              </div>
+              <div class="color-selector ui vertical segment row">
+                <h3>Select scroll thumb hover color</h3>
+                <div class="ui input">
+                  <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12">
+                </div>
+              </div>
+
+              <div id="generated-code-container" class="column ui segment">
+                <div class="ui top right attached label">Code:&nbsp;<em>javascript</em></div>
+                  <div id="example-code-block" class="code javascript">
+                </div>
+              </div>
           </div>
-          <div class="ui vertical segment row">
-            <p>Set scroll witdh:</p>
-            <div id="example-1-width-container" class="ui right labeled input">
-              <input class="trigger-scroll" type="number" id="example-1-width" value="5">
-              <div class="ui basic label"><text>px</text></div>
+        </section>
+    </div>
+      <section class="ui stackable one column centered grid">
+        <div class="column">
+          <div class="ui yellow segment row">
+            <p>If you want to report some bug, ask for new fucntionality or add yourself new features, please access here to Github repo.</p>
+            <br>
+            <div class="flex-center">
+              <a href="https://github.com/mpeix/customscrollbar" target="_blank">
+                <i class="big github icon"></i>
+              </a>
             </div>
-            <button id="e1-minus-width" class="ui circular basic icon button" onclick="changeWidth('substract')">
-                <i class="minus icon"></i>
-            </button>
-            <button id="e1-plus-width" class="ui circular basic icon button" onclick="changeWidth('add')">
-              <i class="plus icon pointing label"></i>
-            </button>
           </div>
-          <div class="color-selector ui vertical segment row">
-            <p>Select scrollbar color: &nbsp;</p>
-            <div class="ui input">
-              <input class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6">
-            </div>
-          </div>
-          <div class="color-selector ui vertical segment row">
-            <p>Select scroll thumb color: &nbsp;</p>
-            <div class="ui input">
-              <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62">
-            </div>
-          </div>
-          <div class="color-selector ui vertical segment row">
-            <p>Select scroll thumb hover color: &nbsp;</p>
-            <div class="ui input">
-              <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12">
-            </div>
-          </div>
-          <div id="generated-code-container" class="column">
-            <p></p>
-          </div>
-      </div>
-    </section>
+        </div>
+      </section>
+  </main>
+  <footer class="flex-center">
+    <i class="circular user icon"></i>
+    <i class="circular github icon"></i>
+    <i class="circular linkedin icon"></i>
+    <i class="circular xing icon"></i>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script src="https://semantic-ui.com/javascript/library/highlight.min.js"></script>
+  <script src="./scripts/main.js"></script>
+  <script type="text/javascript">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    var changeElmements = document.getElementsByClassName('trigger-scroll')
+    for (var i = 0; i < changeElmements.length; i++) {
+      changeElmements[i].addEventListener('change', runScroll);
+    }
 
-    <script src="./scripts/main.js"></script>
+    function changeWidth(operation){
+      var element = $('#example-1-width');
+      var currentValue = parseInt(element.val());
+      var newValue = operation === 'add' ? currentValue + 1 : currentValue - 1;
+      element.val(newValue);
+      runScroll();
+    };
 
-    <script type="text/javascript">
-      
-      var changeElmements = document.getElementsByClassName('trigger-scroll')
-      for (var i = 0; i < changeElmements.length; i++) {
-        changeElmements[i].addEventListener('change', runScroll);
+    function runScroll(){
+      console.log('... runScroll ...');
+      var scrollWidth = $('#example-1-width').val();
+      var newTrackColor = $('#example-scroll-track-color').val()
+      var scrollThumbColor = $('#example-scroll-thumb-color').val();
+      var scrollThumbHoverColor = $('#example-scroll-thumb-hover-color').val();
+      var scrollObject = {
+        selector: '#scroll-container-example-1',
+        scrollWidth: scrollWidth,
+        scrollTrackColor: newTrackColor,
+        scrollThumbColor: scrollThumbColor,
+        scrollThumbHoverColor: scrollThumbHoverColor
       }
+      MyScroll.run(scrollObject);
+      printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor);
+    };
 
-      function changeWidth(operation){
-        var element = $('#example-1-width');
-        var currentValue = parseInt(element.val());
-        var newValue = operation === 'add' ? currentValue + 1 : currentValue - 1;
-        element.val(newValue);
-        runScroll();
-      };
-  
-      function runScroll(){
-        console.log('... runScroll ...');
-        var newWidth = $('#example-1-width').val();
-        var newTrackColor = $('#example-scroll-track-color').val()
-        var scrollThumbColor = $('#example-scroll-thumb-color').val();
-        var scrollThumbHoverColor = $('#example-scroll-thumb-hover-color').val();
-        var scrollObject = {
-          selector: '#scroll-container-example-1',
-          scrollWidth: newWidth,
-          scrollTrackColor: newTrackColor,
-          scrollThumbColor: scrollThumbColor,
-          scrollThumbHoverColor: scrollThumbHoverColor
-        }
-        
-        MyScroll.run(scrollObject);
+    function printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor){
+      var script = "<span class='base-code'>MyScroll.<span class='function'>run</span>({ </span><br>"
+      script +="<span class='base-code paddingl15'>selector: </span>" +  "<span class='string'> '#your-scrollable-container'</span>, <br>",
+      script +="<span class='base-code paddingl15'>scrollWidth: </span><span class='number'>" + scrollWidth + "</span>,<br>";
+      script +="<span class='base-code paddingl15'>scrollTrackColor: </span><span class='color'>'"+ newTrackColor + "'</span>,<br>";
+      script +="<span class='base-code paddingl15'>scrollThumbColor: </span><span class='color'>'" + scrollThumbColor+ "'</span>,<br>";
+      script +="<span class='base-code paddingl15'>scrollThumbHoverColor: </span><span class='color'>'" + scrollThumbHoverColor +"'</span><br>";
+      script +="});";
 
-        var script = "MyScroll.run({"
-        script +="selector: " + selector + ",";
-        script +="scrollWidth: " + scrollWidth + ",";
-        script +="scrollWidth: "+ newTrackColor + ",";
-        script +="scrollThumbColor: " + scrollThumbColor+ ",";
-        script +="scrollThumbHoverColor: " + scrollThumbHoverColor;
-        script +="})";
-        $('#generated-code-container p').text(script);
-      };
+      $('#example-code-block').html(script);
+    }
 
-      $( document ).ready(function() {
-        MyScroll.run({});
-      });
-    </script>
+    $( document ).ready(function() {
+      runScroll();
+      printCode(5,'#f5f5f6','#4f5b62','#000a12');
+    });
+  </script>
 </body>
 </html>
