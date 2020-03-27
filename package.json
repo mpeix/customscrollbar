@@ -29,8 +29,12 @@
   "browserslist": "> .1%, since 2010,  not ie >= 10",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-scroll-dev": "webpack --env.dev=true --mode=development --config webpack.scroll.config.js --watch",
-    "build-scroll-live": "npm run build-scroll --env.MODE=production"
+    "webpack-dev-var": "webpack --env.env=test --env.config=var --mode=development --watch --config webpack.scroll.config.js",
+    "webpack-dev-commonJS2": "webpack --env.env=test --mode=development --watch --config webpack.scroll.config.js",
+    "build-scroll-dev": "npm run webpack-dev-var  &&npm run webpack-dev-commonJS2",
+    "webpack-var": "webpack --env.env=live --env.config=var --config webpack.scroll.config.js",
+    "webpack-commonJS2": "webpack --env.env=live --config webpack.scroll.config.js",
+    "build-scroll": "npm run webpack-var && npm run webpack-commonJS2"
   },
   "keywords": [],
   "author": "Miquel Peix",

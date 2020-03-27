@@ -22,9 +22,7 @@ const run = (options) =>{
     }
    
     styleTag.innerText = '';
-    let css = createStylesheetString(optionsOrDefaults);
-    console.log(css);
-    
+    let css = createStylesheetString(optionsOrDefaults);   
     styleTag.appendChild(document.createTextNode(css))
     document.head.appendChild(styleTag);
 };

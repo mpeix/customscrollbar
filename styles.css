@@ -22,9 +22,18 @@ section{
     padding-top: 50px !important;
 }
 
+.content{
+    padding-top: 15px;
+    text-align: left !important;
+}
+#example-code-container{
+    font-size: 13px;
+}
+
 #generator-section-container{
     background-color: #F5F5F6;
 }
+
 .scrollable-container{
     max-height: 40vh;
     border: 1px solid lightgray;        
