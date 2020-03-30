@@ -1,8 +1,8 @@
 {
   "name": "custom-scrollbar",
   "version": "1.0.0",
-  "description": "Style scroll bars",
-  "main": "public/js/scroll.js",
+  "description": "Myscroll, an easy to use tool to customize your scrollbars",
+  "main": "scripts/main.js",
   "dependencies": {
     "npm-run-all": "^4.1.5",
     "style-loader": "^1.1.3"

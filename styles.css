@@ -1,8 +1,22 @@
+body{
+    font-family: 'Varela';
+    font-size: 1.15rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu';
+}
+
 .flex-center{
     display: flex;
     justify-content: center;
 }
-
+a{
+    color:rgba(0,0,0,.87)
+}
+a:hover{
+    color: #62727b;
+}
 header{
     text-align: center;
     width: 90%;
@@ -16,22 +30,37 @@ footer{
     padding: 10px;
 }
 
+footer a{
+    cursor: pointer;
+}
+
 section{
-    max-width: 350px;
+    max-width: 450px;
     margin: 0 auto !important;
     padding-top: 50px !important;
+}
+
+#import-steps{
+    border: none;
 }
 
 .content{
     padding-top: 15px;
     text-align: left !important;
 }
+
 #example-code-container{
     font-size: 13px;
 }
 
+.html-code-contairer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #generator-section-container{
     background-color: #F5F5F6;
+    margin-top: 30px;
 }
 
 .scrollable-container{
@@ -82,6 +111,18 @@ section{
 .color{
     color:#4f5b62;
 }
+.html-brace{
+   color: #8eacbb; 
+}
+.html-tag{
+    color:#0277bd;
+}
+.html-attribute{
+    color:#58a5f0;
+}
+.html-attribute-content{
+    color:#ff833a;
+}
 .paddingl15{
     padding-left: 15px;
 }
@@ -91,6 +132,20 @@ section{
 .paddingl45{
     padding-left: 45px;
 }
+.paddingt15{
+    padding-top: 15px;
+}
 .function{
     color:#0288d1;
+}
+.other-project-links-container{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.other-project-links-container a{
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: cursive;
+    color: #4f5b62;
 }

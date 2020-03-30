@@ -3,10 +3,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll Demo</title>
-  <meta name="description" content="Javascript Scroll Utility. Style scroll in any div. Cross - browsser compatibility">
-  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>My Scroll - Demo page</title>
+  <meta name="description" content="Javascript MyScroll Utility. Customize your scrollbar withd this easy to use pluggin.">
+  <meta name="author" content="Miquel Peix">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Varela&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
@@ -14,30 +15,45 @@
 <body>
     <header>
       <h1>MyScroll</h1>
-      <h2>Discover <em>MyScroll</em>, an easy tool to customize your scrollbars</h2>
+      <h2>Discover <em>MyScroll</em>, an easy to use tool to customize your scrollbars</h2>
     </header>
 
     <main>     
       <section class="ui one column grid">
-        <div class="segment column"> 
-          <p>Here you will find a demo tool with sample snippets to made your integration with <em>MyScroll</em> easear.</p>
+        <div class="column"> 
+          <p>Here you will find a demo tool with sample snippets to made your integration with <em>MyScroll</em> easier.</p>
           <p>But,</p> 
           <p class="paddingl15">... before ...</p>
           <p class="paddingl30"><b>I will tell you how to use it!!!</b></p>
-          <p class="paddingl45">only in two steps</p>
-          <div class="ui ordered steps vertical">
+          <p class="paddingl45">in only two steps</p>
+          <div id="import-steps" class="ui ordered vertical steps">
             <div class="step">              
               <div class="content">
-                <div class="description">Import code from cdn or take main.js and add it into your project</div>
-                <div class="base-code">
+                <div class="description">
+                  Import code from cdn or take main.js and add it into your project
+                </div>
+                <div id="example-code-container" class="column ui segment">
+                  <div class="ui top right attached label">Code:&nbsp;<em>html</em></div>
+                    <div class="html-code-contairer">
+                      <span class="html-brace">&lt;</span>
+                      <span class="html-tag">script&nbsp;</span>
+                      <span class="html-attribute">type=</span>
+                      <span class="html-attribute-content">"text/javascript"&nbsp;</span>
+                      <span class="html-attribute">src=</span>
+                      <span class="html-attribute-content">"https://cdn.peixweb.com/js/myscroll.js"</span>
+                      <span class="html-brace">&gt;</span>
+                      <span class="html-brace">&lt;</span>
+                      <span class="html-tag">/script</span>
+                      <span class="html-brace">&gt;</span>
+                    </div>
                 </div>
               </div>
             </div>
             <div class="step">              
               <div class="content">
                 <div class="description">
-                  To customize an scroll bar simply type MyScroll.run inside script tag in your html document.
-                  run function receive an options object, you will need to fill it with desired values.
+                  <p>To customize an scroll bar simply type MyScroll.run inside script tag in your html document.
+                  run function receive an options object, you will need to fill it with desired values.</p>
                 </div>
                 <div id="example-code-container" class="column ui segment">
                   <div class="ui top right attached label">Code:&nbsp;<em>javascript</em></div>
@@ -53,10 +69,22 @@
                       </div>
                   </div>
                 </div>
+                <div class="description">
+                  <p>The <strong>selector</strong> property is simply the css selector, if you want to style a tag wid id use: <em>selector:'#my-component'</em>, 
+                  if you want to style a class use dot, for example: <em>selector:'.my-class'</em> or if you want to style a standard html components
+                  use for example: <em>selector:'body'</em>.</p>
+                </div>
               </div>
             </div>           
         </div> 
-        <div class="segment column"> 
+        <div class="segment column paddingt15">
+          <h3>Usage with javascript modules </h3>
+          <p>Are you using javascript modules?, check documentation in NPM page here => <a>
+            <i class="npm large icon"></i>
+          </a></p>
+        </div>
+        <div class="segment column paddingt15"> 
+          <h3>Browser support</h3>
           <p>I have tested the code in the following browsers:</p>
           <div class="ui middle aligned animated list">
             <div class="item">
@@ -142,12 +170,57 @@
           </div>
         </div>
       </section>
+      <section class="ui one column grid">
+
+        <div class="column">
+          <div class="ui teal segment row">
+            <p>Have a look into my other projects to discover more helpfull tools for frontend developers</p>
+            <br>
+            <div class="flex-center other-project-links-container">
+              <a class="paddingt15" href="https://urldecoder.peixweb.com/" target="_blank">
+                Url decoder
+              </a>
+              <a class="paddingl15 paddingt15" href="https://dateformatter.peixweb.com/" target="_blank">
+                Datetime formater
+              </a>
+              <a class="paddingl15 paddingt15" href="https://github.com/mpeix/flexgrid" target="_blank">
+                CSS flexgrid
+              </a>
+              <a class="paddingl15 paddingt15" href="https://www.npmjs.com/package/jsgetfirst" target="_blank">
+                jsgetfirst
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ui one column grid">
+        <div class="column">
+          <div class="ui olive segment row">
+            <h3>Did you like my work?</h3>
+            <p>Consider supporting me buying a cup on cofee</p>
+            <br>
+            <div class="flex-center">
+              <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/miquelpeix"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ui one column grid">
+      
   </main>
   <footer class="flex-center">
-    <i class="circular user icon"></i>
-    <i class="circular github icon"></i>
-    <i class="circular linkedin icon"></i>
-    <i class="circular xing icon"></i>
+    <a href="https://peixweb.com/" target="_blank">
+      <i class="circular user icon"></i>
+    </a>
+    <a href="https://github.com/mpeix" target="_blank">
+      <i class="circular github icon"></i>
+    </a>
+    <a href="https://es.linkedin.com/in/miquelpeixtarres" target="_blank">
+      <i class="circular linkedin icon"></i>
+    </a>
+    <a href="https://www.xing.com/profile/Miquel_PeixTarres" target="_blank">
+      <i class="circular xing icon"></i>
+    </a>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -170,7 +243,6 @@
     };
 
     function runScroll(){
-      console.log('... runScroll ...');
       var scrollWidth = $('#example-1-width').val();
       var newTrackColor = $('#example-scroll-track-color').val()
       var scrollThumbColor = $('#example-scroll-thumb-color').val();
@@ -200,6 +272,7 @@
 
     $( document ).ready(function() {
       runScroll();
+      MyScroll.run({selector:'body'});
       printCode(5,'#f5f5f6','#4f5b62','#000a12');
     });
   </script>
