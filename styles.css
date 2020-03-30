@@ -17,6 +17,9 @@ a{
 a:hover{
     color: #62727b;
 }
+p{
+    font-size: 1.2rem;
+}
 header{
     text-align: center;
     width: 90%;
@@ -39,13 +42,61 @@ section{
     margin: 0 auto !important;
     padding-top: 50px !important;
 }
+/*************************Commont styles*************************/
+/*-------Padding utilities---------*/
+.padding-left-15{
+    padding-left: 15px;
+}
+.padding-left-30{
+    padding-left: 30px;
+}
+.padding-left-45{
+    padding-left: 45px;
+}
+.padding-top-15{
+    padding-top: 15px;
+}
+/*-----END Padding utilities--------*/
 
+/*------CODE HIGHLIGHT utilities---*/
+.code-font{
+    font-family: 'Inconsolata';
+}
+.code-string{
+    color:#008C79;
+}
+.code-number{
+    color:blue;
+}
+.code-color{
+    color:#4f5b62;
+}
+.html-brace{
+    color: #8eacbb; 
+}
+.html-tag{
+     color:#0277bd;
+}
+.html-attribute{
+     color:#58a5f0;
+}
+.html-attribute-content{
+     color:#ff833a;
+}
+.function{
+     color:#0288d1;
+}
+.gray-background{
+    background-color: #F5F5F6;
+}
+/*----END CODE HIGHLIGHT utilities---*/
+
+/*************************END Commont styles/*************************/
 #import-steps{
     border: none;
 }
 
 .content{
-    padding-top: 15px;
     text-align: left !important;
 }
 
@@ -53,9 +104,19 @@ section{
     font-size: 13px;
 }
 
-.html-code-contairer{
+.html-code-container{
     display: flex;
     flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#example-js-code-container, .html-code-container{
+    font-size: 20px;
+}
+@media only screen and (max-width: 767px){
+    #example-js-code-container, .html-code-container{
+        font-size: 15px;
+    }
 }
 
 #generator-section-container{
@@ -101,43 +162,6 @@ section{
     padding: 2px !important;
 }
 
-.string{
-    color:#008C79;
-}
-
-.number{
-    color:blue;
-}
-.color{
-    color:#4f5b62;
-}
-.html-brace{
-   color: #8eacbb; 
-}
-.html-tag{
-    color:#0277bd;
-}
-.html-attribute{
-    color:#58a5f0;
-}
-.html-attribute-content{
-    color:#ff833a;
-}
-.paddingl15{
-    padding-left: 15px;
-}
-.paddingl30{
-    padding-left: 30px;
-}
-.paddingl45{
-    padding-left: 45px;
-}
-.paddingt15{
-    padding-top: 15px;
-}
-.function{
-    color:#0288d1;
-}
 .other-project-links-container{
     justify-content: space-around;
     flex-wrap: wrap;
@@ -149,3 +173,8 @@ section{
     font-family: cursive;
     color: #4f5b62;
 }
+/************SEMANTIC UI OVERRIDES***************/
+.step{
+    padding-left:0 !important;
+}
+/************END SEMANTIC UI OVERRIDES************/
