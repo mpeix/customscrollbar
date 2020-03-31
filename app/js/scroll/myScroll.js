@@ -14,10 +14,10 @@ const run = (options) =>{
       useArrows:useArrows || false,
     };
     
-    let styleTag = document.getElementById('my-scroll-style');
+    let styleTag = document.getElementById('my-scroll-style-' + selector);
     if(!styleTag){
       styleTag = document.createElement("style");
-      styleTag.id = "my-scroll-style";
+      styleTag.id = "my-scroll-style-" + selector;
       styleTag.type = "text/css";
     }
    

@@ -33,16 +33,15 @@ footer{
     padding: 10px;
 }
 
-footer a{
-    cursor: pointer;
-}
-
 section{
     max-width: 450px;
     margin: 0 auto !important;
     padding-top: 50px !important;
 }
 /*************************Commont styles*************************/
+.pointer{
+    cursor: pointer;
+}
 /*-------Padding utilities---------*/
 .padding-left-15{
     padding-left: 15px;
@@ -55,6 +54,12 @@ section{
 }
 .padding-top-15{
     padding-top: 15px;
+}
+.padding-top-25{
+    padding-top: 25px;
+}
+.padding-bottom-25{
+    padding-bottom: 25px;
 }
 /*-----END Padding utilities--------*/
 
@@ -94,6 +99,7 @@ section{
 /*************************END Commont styles/*************************/
 #import-steps{
     border: none;
+    display: flex;
 }
 
 .content{
@@ -104,17 +110,17 @@ section{
     font-size: 13px;
 }
 
-.html-code-container{
+#html-copy-to-clipboard{
     display: flex;
     flex-wrap: wrap;
     padding-top: 25px;
     padding-bottom: 25px;
 }
-#example-js-code-container, .html-code-container{
+#example-js-code-container, #html-copy-to-clipboard{
     font-size: 20px;
 }
 @media only screen and (max-width: 767px){
-    #example-js-code-container, .html-code-container{
+    #example-js-code-container, #html-copy-to-clipboard{
         font-size: 15px;
     }
 }
@@ -167,7 +173,6 @@ section{
     flex-wrap: wrap;
 }
 .other-project-links-container a{
-    cursor: pointer;
     text-align: center;
     text-transform: uppercase;
     font-family: cursive;

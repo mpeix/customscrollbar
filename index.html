@@ -9,6 +9,11 @@
   <meta name="author" content="Miquel Peix">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Varela&display=swap&amily=Inconsolata&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <!--The following tas is the style from buymeacoffee-->
+  <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style>
+  <!--The following font is used by buymeacoffee-->
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+  <link rel="stylesheet" href="./scripts/spectrum.css">
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
@@ -17,7 +22,6 @@
       <h1>MyScroll</h1>
       <h2>Discover <em>MyScroll</em>, an easy to use tool to customize your scrollbars</h2>
     </header>
-
     <main>     
       <section class="ui one column grid">
         <div class="column"> 
@@ -36,14 +40,12 @@
                   <div class="ui top right attached label">
                     Code:&nbsp;<em>html</em>
                   </div>
-                  <div id="label-html-copy-to-clipboard" onclick="copyToClipboard('html-copy-to-clipboard')" class="ui bottom right attached label">
-                    Copy to clipboard
+                  <div class="ui bottom right attached label pointer" onclick="copyToClipboard('html-copy-to-clipboard')" >
+                    <em>Copy to clipboard</em>
                   </div>
-                  <div  id="html-copy-to-clipboard" class="html-code-container code-font">
+                  <div id="html-copy-to-clipboard" class="code-font padding-top-25 padding-bottom-25">
                     <span class="html-brace">&lt;</span>
                     <span class="html-tag">script&nbsp;</span>
-                    <span class="html-attribute">type=</span>
-                    <span class="html-attribute-content">"text/javascript"&nbsp;</span>
                     <span class="html-attribute">src=</span>
                     <span class="html-attribute-content">"https://cdn.peixweb.com/js/myscroll.js"</span>
                     <span class="html-brace">&gt;</span>
@@ -60,10 +62,15 @@
                   <p>To customize an scroll bar simply type MyScroll.run inside script tag in your html document.
                   run function receive an options object, you will need to fill it with desired values.</p>
                 </div>
-                <div id="example-code-container" class="column ui segment">
-                  <div class="ui top right attached label">Code:&nbsp;<em>javascript</em></div>                   
-                  <div id="example-js-code-container" class="code-font">
-                    MyScroll.<span class='function'>run</span>({ </span><br>
+                <div class="column ui segment">
+                  <div class="ui top right attached label">
+                    Code:&nbsp;<em>javascript</em>
+                  </div>   
+                  <div class="ui bottom right attached label pointer" onclick="copyToClipboard('example-js-code-container')">
+                    <em>Copy to clipboard</em>
+                  </div>                
+                  <div id="example-js-code-container" class="code-font padding-top-25 padding-bottom-25">
+                    MyScroll.<span class='function'>run</span>({ <br>
                     <span class='padding-left-15'>selector: </span> <span class='code-string'> '#container'</span>, <br>
                     <span class='padding-left-15'>scrollWidth: </span><span class='code-number'> 5 </span>,<br>
                     <span class='padding-left-15'>scrollTrackColor: </span><span class='code-color'> '#f5f5f6' </span>,<br>
@@ -81,87 +88,93 @@
                 </div>
               </div>
             </div>           
-        </div> 
-        <div class="segment column padding-top-15">
-          <h3>Usage with javascript modules </h3>
-          <p>Are you using javascript modules?, check documentation in NPM page here => <a>
-            <i class="npm large icon"></i>
-          </a></p>
-        </div>
-        <div class="segment column padding-top-15"> 
-          <h3>Browser support</h3>
-          <p>I have tested the code in the following browsers:</p>
-          <div class="ui middle aligned animated list">
-            <div class="item">
-              <i class="chrome icon"></i>
-              <div class="content padding-top-15">
-                <div class="header">Chrome</div>
+          </div> 
+          <div class="segment column padding-top-15">
+            <h3>Usage with javascript modules </h3>
+            <p>Are you using javascript modules?, check documentation in NPM page here => <a>
+              <i class="npm large icon"></i>
+            </a></p>
+          </div>
+          <div class="segment column padding-top-15"> 
+            <h3>Browser support</h3>
+            <p>I have tested the code in the following browsers:</p>
+            <div class="ui middle aligned animated list">
+              <div class="item">
+                <i class="chrome icon"></i>
+                <div class="content padding-top-15">
+                  <div class="header">Chrome</div>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <i class="internet explorer icon"></i>
-              <div class="content padding-top-15">
-                <div class="header">Internet Explorer (11)</div>
+              <div class="item">
+                <i class="internet explorer icon"></i>
+                <div class="content padding-top-15">
+                  <div class="header">Internet Explorer (11)</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <div id="generator-section-container">
-        <section class="examples-container ui one column grid">
-          <h2>Script generator tool</h2>
-          <div class="column">
-              <div id="scroll-container-example-1" class='scrollable-container ui segment row'>
-                  <div class="scrollable-content flex-center padding-top-15">
-                    <p class="top">top</p>
-                    <span>...</span>
-                    <p class="bottom">bottom</p>
-                  </div>                
-              </div>
-              <div class="ui vertical segment row">
-                <h3>Set scroll bar witdh</h3>
-                <div id="example-1-width-container" class="ui right labeled input">
-                  <input class="trigger-scroll" type="number" id="example-1-width" value="5">
-                  <div class="ui basic label"><text>px</text></div>
+        <section class="ui one column grid">
+            <h2>Script generator tool</h2>
+            <div class="column">
+                <div id="scroll-container-example-1" class='scrollable-container ui segment row'>
+                    <div class="scrollable-content flex-center padding-top-15">
+                      <p class="top">top</p>
+                      <span>...</span>
+                      <p class="bottom">bottom</p>
+                    </div>                
                 </div>
-                <button id="e1-minus-width" class="ui circular basic icon button" onclick="changeWidth('substract')">
-                    <i class="minus icon"></i>
-                </button>
-                <button id="e1-plus-width" class="ui circular basic icon button" onclick="changeWidth('add')">
-                  <i class="plus icon pointing label"></i>
-                </button>
-
-                <div class="disclaimer row">
-                  <p>* <em>Scroll bar with is not supported in Internet explorer</em></p>
+                <div class="ui vertical segment row">
+                  <h3>Set scroll bar witdh</h3>
+                  <div id="example-1-width-container" class="ui right labeled input">
+                    <input class="trigger-scroll" type="number" id="example-1-width" value="5">
+                    <div class="ui basic label"><p>px</p></div>
+                  </div>
+                  <button id="e1-minus-width" class="ui circular basic icon button" onclick="changeWidth('substract')">
+                      <i class="minus icon"></i>
+                  </button>
+                  <button id="e1-plus-width" class="ui circular basic icon button" onclick="changeWidth('add')">
+                    <i class="plus icon pointing label"></i>
+                  </button>
+                  <div class="disclaimer row">
+                    <p>* <em>Scroll bar width is not supported in Internet explorer</em></p>
+                  </div>
                 </div>
-              </div>
-              <div class="color-selector ui vertical segment row">
-                <h3>Select scrollbar color</h3>
-                <div class="ui input">
-                  <input class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6">
+                <div class="color-selector ui vertical segment row">
+                  <h3>Select scrollbar color</h3>
+                  <div class="ui input">
+                    <input class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6" />
+                  </div>
                 </div>
-              </div>
-              <div class="color-selector ui vertical segment row">
-                <h3>Select scroll thumb color</h3>
-                <div class="ui input">
-                  <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62">
+                <div class="color-selector ui vertical segment row">
+                  <h3>Select scroll thumb color</h3>
+                  <div class="ui input">
+                    <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62" />
+                  </div>
                 </div>
-              </div>
-              <div class="color-selector ui vertical segment row">
-                <h3>Select scroll thumb hover color</h3>
-                <div class="ui input">
-                  <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12">
+                <div class="color-selector ui vertical segment row">
+                  <h3>Select scroll thumb hover color</h3>
+                  <div class="ui input">
+                    <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
+                  </div>
                 </div>
-              </div>
-
-              <div id="generated-code-container" class="column ui segment">
-                <div class="ui top right attached label">Code:&nbsp;<em>javascript</em></div>
-                  <div id="example-code-block" class="code javascript">
+                <div id="generated-code-container" class="column ui segment">
+                  <div class="ui top right attached label">
+                    Code:&nbsp;<em>javascript</em>
+                  </div>
+                  <div class="ui bottom right attached label pointer" onclick="copyToClipboard('example-code-block')" >
+                    <em>Copy to clipboard</em>
+                  </div>
+                  <div id="example-code-block" class="padding-top-25 padding-bottom-25">
+                  </div>
                 </div>
-              </div>
-          </div>
+            </div>
         </section>
-    </div>
+      </div>
+    
       <section class="ui one column grid">
         <div class="column">
           <div class="ui yellow segment row">
@@ -175,23 +188,23 @@
           </div>
         </div>
       </section>
-      <section class="ui one column grid">
 
+      <section class="ui one column grid">
         <div class="column">
           <div class="ui teal segment row">
             <p>Have a look into my other projects to discover more helpfull tools for frontend developers</p>
             <br>
             <div class="flex-center other-project-links-container">
-              <a class="padding-top-15" href="https://urldecoder.peixweb.com/" target="_blank">
+              <a class="padding-top-15 pointer" href="https://urldecoder.peixweb.com/" target="_blank">
                 Url decoder
               </a>
-              <a class="padding-left-15 padding-top-15" href="https://dateformatter.peixweb.com/" target="_blank">
+              <a class="padding-left-15 padding-top-15 pointer" href="https://dateformatter.peixweb.com/" target="_blank">
                 Datetime formater
               </a>
-              <a class="padding-left-15 padding-top-15" href="https://github.com/mpeix/flexgrid" target="_blank">
+              <a class="padding-left-15 padding-top-15 pointer" href="https://github.com/mpeix/flexgrid" target="_blank">
                 CSS flexgrid
               </a>
-              <a class="padding-left-15 padding-top-15" href="https://www.npmjs.com/package/jsgetfirst" target="_blank">
+              <a class="padding-left-15 padding-top-15 pointer" href="https://www.npmjs.com/package/jsgetfirst" target="_blank">
                 jsgetfirst
               </a>
             </div>
@@ -205,25 +218,24 @@
             <p>Consider supporting me buying a cup on cofee</p>
             <br>
             <div class="flex-center">
-              <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/miquelpeix"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+              <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/miquelpeix"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
             </div>
           </div>
         </div>
       </section>
-      <section class="ui one column grid">
-      
+           
   </main>
   <footer class="flex-center">
-    <a href="https://peixweb.com/" target="_blank">
+    <a class="pointer" href="https://peixweb.com/" target="_blank">
       <i class="circular user icon"></i>
     </a>
-    <a href="https://github.com/mpeix" target="_blank">
+    <a class="pointer" href="https://github.com/mpeix" target="_blank">
       <i class="circular github icon"></i>
     </a>
-    <a href="https://es.linkedin.com/in/miquelpeixtarres" target="_blank">
+    <a class="pointer" href="https://es.linkedin.com/in/miquelpeixtarres" target="_blank">
       <i class="circular linkedin icon"></i>
     </a>
-    <a href="https://www.xing.com/profile/Miquel_PeixTarres" target="_blank">
+    <a class="pointer" href="https://www.xing.com/profile/Miquel_PeixTarres" target="_blank">
       <i class="circular xing icon"></i>
     </a>
   </footer>
@@ -231,8 +243,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <script src="https://semantic-ui.com/javascript/library/highlight.min.js"></script>
+  <script src="./scripts/spectrum.js"></script>
   <script src="https://cdn.peixweb.com/js/myscroll.js"></script>
-  <script type="text/javascript">
+  <script>
     
     var changeElmements = document.getElementsByClassName('trigger-scroll')
     for (var i = 0; i < changeElmements.length; i++) {
@@ -276,30 +289,34 @@
     }
     
     function copyToClipboard(id) {
-      debugger;
-      var copyText = $('#'+id);
-      var textToCopy = copyText.text().trim();
-      console.log('textToCopy');
-      console.log(textToCopy);
-      var el = document.createElement('textarea');
+      var textToCopy="";
+      if(id==="html-copy-to-clipboard"){
+        /*Is html, transformation needed in order to allow copy < and >*/
+        textToCopy='&lt;script src="https://cdn.peixweb.com/js/myscroll.js"&gt;&lt;/script&gt;';
+        textToCopy= textToCopy.replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+      }
+      else
+        textToCopy =$('#'+id).text();
+
+      var textAreaTemp = document.createElement('textarea');
       // Set value (string to be copied)
-      el.value = textToCopy;
+      textAreaTemp.value = textToCopy;
       // Set non-editable to avoid focus and move outside of view
-      el.setAttribute('readonly', '');
-      el.style = {position: 'absolute', left: '-9999px'};
-      document.body.appendChild(el);
-      el.setSelectionRange(0, 99999);
+      textAreaTemp.setAttribute('readonly', '');
+      textAreaTemp.style = {position: 'absolute', left: '-9999px'};
+      document.body.appendChild(textAreaTemp);
+      textAreaTemp.setSelectionRange(0, 99999);
       // Select text inside element
-      el.select();
-    
+      textAreaTemp.select();
       // Copy text to clipboard
       document.execCommand('copy');
       // Remove temporary element
-      document.body.removeChild(el);
-    
+      document.body.removeChild(textAreaTemp);
     }
 
     $( document ).ready(function() {
+      //Spectrum color picker will act only as a polifyll
+      $.fn.spectrum.load = false;
       runScroll();
       MyScroll.run({selector:'body'});
       printCode(5,'#f5f5f6','#4f5b62','#000a12');

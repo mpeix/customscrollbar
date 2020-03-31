@@ -24,6 +24,7 @@ const outputCommonJS = (env) => ({
 module.exports = env => {
   console.log(env);
   return {
+    mode: env.env === 'test' ? 'development' : 'production',
     devtool: env.env === 'test' ? 'inline-source-map' : false,
     context: path.resolve(__dirname, "app"),
     //For multipage application, every page has his entry point
