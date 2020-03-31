@@ -107,7 +107,8 @@ section{
 }
 
 #example-code-container{
-    font-size: 13px;
+    font-size: 16px;
+    max-width: 450px; /*IE fix*/
 }
 
 #html-copy-to-clipboard{
@@ -116,11 +117,11 @@ section{
     padding-top: 25px;
     padding-bottom: 25px;
 }
-#example-js-code-container, #html-copy-to-clipboard{
+#example-js-code-container{
     font-size: 20px;
 }
 @media only screen and (max-width: 767px){
-    #example-js-code-container, #html-copy-to-clipboard{
+    #example-js-code-container{
         font-size: 15px;
     }
 }

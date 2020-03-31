@@ -3,17 +3,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Scroll - Demo page</title>
   <meta name="description" content="Javascript MyScroll Utility. Customize your scrollbar withd this easy to use pluggin.">
   <meta name="author" content="Miquel Peix">
+  <meta name="robots" content="index, follow">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Varela&display=swap&amily=Inconsolata&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   <!--The following tas is the style from buymeacoffee-->
   <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style>
   <!--The following font is used by buymeacoffee-->
   <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-  <link rel="stylesheet" href="./scripts/spectrum.css">
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
@@ -25,12 +25,12 @@
     <main>     
       <section class="ui one column grid">
         <div class="column"> 
-          <p>Here you will find a demo tool with sample snippets to made your integration with <em>MyScroll</em> easier.</p>
+          <p>Here you will find a demo tool with sample snippets to make your integration with <em>MyScroll</em> easier.</p>
           <p>But,</p> 
           <p class="padding-left-15">... before ...</p>
           <p class="padding-left-30"><b>I will tell you how to use it!!!</b></p>
           <p class="padding-left-45">in only two steps</p>
-          <div id="import-steps" class="ui ordered vertical steps">
+          <div id="import-steps" class="ui ordered vertical steps padding-top-25">
             <div class="step">              
               <div class="content padding-top-15">
                 <div class="description">
@@ -91,9 +91,12 @@
           </div> 
           <div class="segment column padding-top-15">
             <h3>Usage with javascript modules </h3>
-            <p>Are you using javascript modules?, check documentation in NPM page here => <a>
-              <i class="npm large icon"></i>
-            </a></p>
+            <p>Are you using javascript modules?, check documentation in NPM page here 
+              <i class="arrow right icon"></i>
+              <a>
+                <i class="npm large icon"></i>
+              </a>
+            </p>
           </div>
           <div class="segment column padding-top-15"> 
             <h3>Browser support</h3>
@@ -159,6 +162,9 @@
                   <h3>Select scroll thumb hover color</h3>
                   <div class="ui input">
                     <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
+                  </div>
+                  <div class="disclaimer row">
+                    <p>* <em>Scroll thumb hover color is not supported in Internet explorer</em></p>
                   </div>
                 </div>
                 <div id="generated-code-container" class="column ui segment">
@@ -242,8 +248,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/highlight.min.js"></script>
-  <script src="./scripts/spectrum.js"></script>
+  <script src="./scripts/modernizr-custom.js"></script>
   <script src="https://cdn.peixweb.com/js/myscroll.js"></script>
   <script>
     
@@ -313,10 +318,10 @@
       // Remove temporary element
       document.body.removeChild(textAreaTemp);
     }
-
+    
     $( document ).ready(function() {
       //Spectrum color picker will act only as a polifyll
-      $.fn.spectrum.load = false;
+    //  $.fn.spectrum.load = false;
       runScroll();
       MyScroll.run({selector:'body'});
       printCode(5,'#f5f5f6','#4f5b62','#000a12');
