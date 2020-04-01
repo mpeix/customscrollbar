@@ -3,7 +3,7 @@ import {detectBrowser} from './browserUtils';
 
 const run = (options) =>{
   const {selector, scrollWidth, scrollTrackColor, scrollThumbColor, scrollThumbHoverColor,
-    useArrows} = options;
+    useArrows, firefoxWidth} = options;
 
     let optionsOrDefaults = {
       selector: selector || '',
@@ -12,6 +12,7 @@ const run = (options) =>{
       scrollThumbColor: scrollThumbColor || '#4f5b62',
       scrollThumbHoverColor: scrollThumbHoverColor || '#000a12',
       useArrows:useArrows || false,
+      firefoxWidth: firefoxWidth || 'auto'
     };
     
     let styleTag = document.getElementById('my-scroll-style-' + selector);
@@ -51,8 +52,8 @@ const createStylesheetString = (options) =>{
       scrollbar-darkshadow-Color:red;
     }
     ${options.selector}{
-      scrollbar-color: ${options.scrollThumbBackground} ${options.scrollTrackColor};
-      scrollbar-width: ${options.scrollWidth};
+      scrollbar-color: ${options.scrollThumbColor} ${options.scrollTrackColor};
+      scrollbar-width: ${options.firefoxWidth};
     }
   `;
 

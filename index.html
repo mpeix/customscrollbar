@@ -75,7 +75,8 @@
                     <span class='padding-left-15'>scrollWidth: </span><span class='code-number'> 5 </span>,<br>
                     <span class='padding-left-15'>scrollTrackColor: </span><span class='code-color'> '#f5f5f6' </span>,<br>
                     <span class='padding-left-15'>scrollThumbColor: </span><span class='code-color'> '#4f5b62'</span>,<br>
-                    <span class='padding-left-15'>scrollThumbHoverColor: </span><span class='code-color'> '#000a12' </span><br>
+                    <span class='padding-left-15'>scrollThumbHoverColor: </span><span class='code-color'> '#000a12' </span>,<br>
+                    <span class='padding-left-15'>firefoxWidth: </span><span class='code-string'> 'auto' </span><br>
                     });
                   </div>                 
                 </div>
@@ -114,6 +115,12 @@
                   <div class="header">Internet Explorer (11)</div>
                 </div>
               </div>
+              <div class="item">
+                <i class="firefox icon"></i>
+                <div class="content padding-top-15">
+                  <div class="header">Firefox</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -142,6 +149,14 @@
                   <button id="e1-plus-width" class="ui circular basic icon button" onclick="changeWidth('add')">
                     <i class="plus icon pointing label"></i>
                   </button>
+                  <div class="padding-top-25">
+                    <h4>Need Firefox support?</h4>
+                    <p>Firefox only admit <em>thin</em> or <em>auto</em> values to personalize scroll with. Choose which you prefer</p>
+                    <div class="ui buttons">
+                      <button class="tiny ui button firefox-width-button" value="thin" onclick="firefoxButtonWidthSelected(this)">Thin</button>
+                      <button class="tiny ui button firefox-width-button" value="auto" onclick="firefoxButtonWidthSelected(this)">Auto</button>
+                    </div>
+                  </div>
                   <div class="disclaimer row">
                     <p>* <em>Scroll bar width is not supported in Internet explorer</em></p>
                   </div>
@@ -174,7 +189,7 @@
                   <div class="ui bottom right attached label pointer" onclick="copyToClipboard('example-code-block')" >
                     <em>Copy to clipboard</em>
                   </div>
-                  <div id="example-code-block" class="padding-top-25 padding-bottom-25">
+                  <div id="example-code-block" class="padding-top-25 padding-bottom-25 code-font">
                   </div>
                 </div>
             </div>
@@ -221,10 +236,12 @@
         <div class="column">
           <div class="ui olive segment row">
             <h3>Did you like my work?</h3>
-            <p>Consider supporting me buying a cup on cofee</p>
+            <p>Consider supporting me buying a cup on coffee</p>
             <br>
             <div class="flex-center">
-              <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/miquelpeix"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+              <div>
+                <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/miquelpeix"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+              </div>
             </div>
           </div>
         </div>
@@ -248,8 +265,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-  <script src="./scripts/modernizr-custom.js"></script>
-  <script src="https://cdn.peixweb.com/js/myscroll.js"></script>
+  <script src="./scripts//myscroll.dev.js"></script>
   <script>
     
     var changeElmements = document.getElementsByClassName('trigger-scroll')
@@ -270,24 +286,27 @@
       var newTrackColor = $('#example-scroll-track-color').val()
       var scrollThumbColor = $('#example-scroll-thumb-color').val();
       var scrollThumbHoverColor = $('#example-scroll-thumb-hover-color').val();
+      var firefoxWidth = $(".firefox-width-button.selected").attr("value") === undefined ? 'auto' : $(".firefox-width-button.selected").attr("value");
       var scrollObject = {
         selector: '#scroll-container-example-1',
         scrollWidth: scrollWidth,
         scrollTrackColor: newTrackColor,
         scrollThumbColor: scrollThumbColor,
-        scrollThumbHoverColor: scrollThumbHoverColor
+        scrollThumbHoverColor: scrollThumbHoverColor,
+        firefoxWidth: firefoxWidth
       }
       MyScroll.run(scrollObject);
-      printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor);
+      printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor, firefoxWidth);
     };
 
-    function printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor){
+    function printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor, firefoxWidth){
       var script = "<span class='base-code'>MyScroll.<span class='function'>run</span>({ </span><br>"
       script +="<span class='base-code padding-left-15'>selector: </span>" +  "<span class='code-string'> '#your-scrollable-container'</span>, <br>",
       script +="<span class='base-code padding-left-15'>scrollWidth: </span><span class='code-number'>" + scrollWidth + "</span>,<br>";
       script +="<span class='base-code padding-left-15'>scrollTrackColor: </span><span class='code-color'>'"+ newTrackColor + "'</span>,<br>";
       script +="<span class='base-code padding-left-15'>scrollThumbColor: </span><span class='code-color'>'" + scrollThumbColor+ "'</span>,<br>";
-      script +="<span class='base-code padding-left-15'>scrollThumbHoverColor: </span><span class='code-color'>'" + scrollThumbHoverColor +"'</span><br>";
+      script +="<span class='base-code padding-left-15'>scrollThumbHoverColor: </span><span class='code-color'>'" + scrollThumbHoverColor +"'</span>,<br>";
+      script +="<span class='base-code padding-left-15'>firefoxWidth: </span><span class='code-string'>'" + firefoxWidth +"'</span><br>";
       script +="});";
 
       $('#example-code-block').html(script);
@@ -319,13 +338,19 @@
       document.body.removeChild(textAreaTemp);
     }
     
+    function firefoxButtonWidthSelected(elem){
+      $(".firefox-width-button").removeClass("selected").removeClass("secondary");
+      $(elem).addClass("selected").addClass("secondary");
+      runScroll();
+    }
+
     $( document ).ready(function() {
       //Spectrum color picker will act only as a polifyll
     //  $.fn.spectrum.load = false;
       runScroll();
       MyScroll.run({selector:'body'});
-      printCode(5,'#f5f5f6','#4f5b62','#000a12');
-    });
+      printCode(5,'#f5f5f6','#4f5b62','#000a12','auto');
+    });   
   </script>
 </body>
 </html>

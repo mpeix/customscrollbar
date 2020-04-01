@@ -117,11 +117,13 @@ section{
     padding-top: 25px;
     padding-bottom: 25px;
 }
-#example-js-code-container{
+
+#example-js-code-container, #example-code-block{
     font-size: 20px;
 }
-@media only screen and (max-width: 767px){
-    #example-js-code-container{
+
+@media only screen and (max-width: 400px){
+    #example-js-code-container, #example-code-block{
         font-size: 15px;
     }
 }
@@ -183,4 +185,8 @@ section{
 .step{
     padding-left:0 !important;
 }
+.ui.secondary.button{
+    background-color: #000a12 !important;
+}
+
 /************END SEMANTIC UI OVERRIDES************/
