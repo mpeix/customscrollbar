@@ -179,7 +179,7 @@
                     <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
                   </div>
                   <div class="disclaimer row">
-                    <p>* <em>Scroll thumb hover color is not supported in Internet explorer</em></p>
+                    <p>* <em>Scroll thumb hover color is not supported in Internet explorer and Firefox</em></p>
                   </div>
                 </div>
                 <div id="generated-code-container" class="column ui segment">
@@ -265,7 +265,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-  <script src="./scripts//myscroll.dev.js"></script>
+  <script src="https://cdn.peixweb.com/js/myscroll.js"></script>
   <script>
     
     var changeElmements = document.getElementsByClassName('trigger-scroll')
@@ -345,8 +345,6 @@
     }
 
     $( document ).ready(function() {
-      //Spectrum color picker will act only as a polifyll
-    //  $.fn.spectrum.load = false;
       runScroll();
       MyScroll.run({selector:'body'});
       printCode(5,'#f5f5f6','#4f5b62','#000a12','auto');
