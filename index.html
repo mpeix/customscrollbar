@@ -8,12 +8,9 @@
   <meta name="description" content="Javascript MyScroll Utility. Customize your scrollbar withd this easy to use pluggin.">
   <meta name="author" content="Miquel Peix">
   <meta name="robots" content="index, follow">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Varela&display=swap&amily=Inconsolata&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
   <!--The following tas is the style from buymeacoffee-->
   <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style>
-  <!--The following font is used by buymeacoffee-->
-  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
@@ -25,16 +22,13 @@
     <main>     
       <section class="ui one column grid">
         <div class="column"> 
-          <p>Here you will find a demo tool with sample snippets to make your integration with <em>MyScroll</em> easier.</p>
-          <p>But,</p> 
-          <p class="padding-left-15">... before ...</p>
-          <p class="padding-left-30"><b>I will tell you how to use it!!!</b></p>
-          <p class="padding-left-45">in only two steps</p>
-          <div id="import-steps" class="ui ordered vertical steps padding-top-25">
+          <p>Here, you will find a demo tool with sample snippets to make your integration with <em>MyScroll</em> fast and easy.</p>
+          <p>You can strart using <em>MyScroll</em> in only two steps</p> 
+          <div id="import-steps" class="ui ordered vertical steps padding-top-10">
             <div class="step">              
               <div class="content padding-top-15">
                 <div class="description">
-                  <p>Import code from cdn or take main.js and add it into your project</p>
+                  <p>Import code from cdn or take myscroll.js file and add it into your project</p>
                 </div>
                 <div id="example-code-container" class="column ui segment">
                   <div class="ui top right attached label">
@@ -71,32 +65,35 @@
                   </div>                
                   <div id="example-js-code-container" class="code-font padding-top-25 padding-bottom-25">
                     MyScroll.<span class='function'>run</span>({ <br>
-                    <span class='padding-left-15'>selector: </span> <span class='code-string'> '#container'</span>, <br>
+                    <span class='padding-left-15'>selector: </span> <span class='code-string'> '#scrollable-container'</span>, <br>
                     <span class='padding-left-15'>scrollWidth: </span><span class='code-number'> 5 </span>,<br>
                     <span class='padding-left-15'>scrollTrackColor: </span><span class='code-color'> '#f5f5f6' </span>,<br>
                     <span class='padding-left-15'>scrollThumbColor: </span><span class='code-color'> '#4f5b62'</span>,<br>
                     <span class='padding-left-15'>scrollThumbHoverColor: </span><span class='code-color'> '#000a12' </span>,<br>
-                    <span class='padding-left-15'>firefoxWidth: </span><span class='code-string'> 'auto' </span><br>
+                    <span class='padding-left-15'>firefoxWidth: </span><span class='code-string'> 'auto' </span>,<br>
+                    <span class='padding-left-15'>useArrows: </span><span class='code-bool'> false </span><br>
                     });
                   </div>                 
                 </div>
                 <div class="description">
-                  <p>The <strong>selector</strong> property is simply the css selector, if you want to style a tag with <strong>id</strong> use: 
+                  <p>The <strong>selector</strong> property is simply the css selector, if you want to style a tag with <strong>id</strong> use hash symbol: 
                   <span class="code-font gray-background">selector:' #my-component'</span>, 
                   if you want to style a <strong>class</strong> use dot, for example: <span class="code-font gray-background">selector: '.my-class'</span> 
-                  or if you want to style a standard html components
-                  use for example: <span class="code-font gray-background">selector: 'body'</span>.</p>
+                  or if you want to style a standard tag use tag name directly,
+                  for example: <span class="code-font gray-background">selector: 'body'</span>.</p>
                 </div>
               </div>
             </div>           
           </div> 
-          <div class="segment column padding-top-15">
-            <h3>Usage with javascript modules </h3>
-            <p>Are you using javascript modules?, check documentation in NPM page here 
-              <i class="arrow right icon"></i>
-              <a>
-                <i class="npm large icon"></i>
-              </a>
+          <div class="segment column">
+            <h3>Usage with javascript modules</h3>
+            <p>Are you using javascript modules?, check documentation in 
+              <u>
+                <a href="https://www.npmjs.com/package/@mpeix/myscroll"> 
+                  <i class="npm big icon"></i>
+                  page here.
+                </a> 
+              </u>
             </p>
           </div>
           <div class="segment column padding-top-15"> 
@@ -151,14 +148,14 @@
                   </button>
                   <div class="padding-top-25">
                     <h4>Need Firefox support?</h4>
-                    <p>Firefox only admit <em>thin</em> or <em>auto</em> values to personalize scroll with. Choose which you prefer</p>
+                    <p>Firefox only admit <em>'thin'</em> or <em>'auto'</em> values to personalize scroll width. Choose which you prefer</p>
                     <div class="ui buttons">
                       <button class="tiny ui button firefox-width-button" value="thin" onclick="firefoxButtonWidthSelected(this)">Thin</button>
                       <button class="tiny ui button firefox-width-button" value="auto" onclick="firefoxButtonWidthSelected(this)">Auto</button>
                     </div>
                   </div>
                   <div class="disclaimer row">
-                    <p>* <em>Scroll bar width is not supported in Internet explorer</em></p>
+                    <p>* <em>Scroll bar width is not supported in Internet Explorer</em></p>
                   </div>
                 </div>
                 <div class="color-selector ui vertical segment row">
@@ -190,6 +187,16 @@
                     <em>Copy to clipboard</em>
                   </div>
                   <div id="example-code-block" class="padding-top-25 padding-bottom-25 code-font">
+                  </div>
+                </div>
+                <div class="ui vertical segment row">
+                  <h3>Use scrollbar arrows</h3>
+                  <div id="use-arrows-checkbox-container" class="ui toggle checkbox">
+                    <input id="use-arrows-checkbox" name="privacy" type="checkbox">
+                    <label id="use-arrows-label">Use arrows</label>
+                  </div>
+                  <div class="disclaimer row">
+                    <p>* <em>Scroll arrows are not supported in Firefox</em></p>
                   </div>
                 </div>
             </div>
@@ -263,11 +270,10 @@
     </a>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-  <script src="https://cdn.peixweb.com/js/myscroll.js"></script>
+  <script src="./scripts/jquery3-4-1.min.js"></script>
+  <script src="./semantic/semantic.min.js"></script>
+  <script src="./scripts/myscroll.dev.js"></script>
   <script>
-    
     var changeElmements = document.getElementsByClassName('trigger-scroll')
     for (var i = 0; i < changeElmements.length; i++) {
       changeElmements[i].addEventListener('change', runScroll);
@@ -282,31 +288,28 @@
     };
 
     function runScroll(){
-      var scrollWidth = $('#example-1-width').val();
-      var newTrackColor = $('#example-scroll-track-color').val()
-      var scrollThumbColor = $('#example-scroll-thumb-color').val();
-      var scrollThumbHoverColor = $('#example-scroll-thumb-hover-color').val();
-      var firefoxWidth = $(".firefox-width-button.selected").attr("value") === undefined ? 'auto' : $(".firefox-width-button.selected").attr("value");
       var scrollObject = {
         selector: '#scroll-container-example-1',
-        scrollWidth: scrollWidth,
-        scrollTrackColor: newTrackColor,
-        scrollThumbColor: scrollThumbColor,
-        scrollThumbHoverColor: scrollThumbHoverColor,
-        firefoxWidth: firefoxWidth
+        scrollWidth: $('#example-1-width').val(),
+        scrollTrackColor: $('#example-scroll-track-color').val(),
+        scrollThumbColor: $('#example-scroll-thumb-color').val(),
+        scrollThumbHoverColor: $('#example-scroll-thumb-hover-color').val(),
+        firefoxWidth: $(".firefox-width-button.selected").attr("value") === undefined ? 'auto' : $(".firefox-width-button.selected").attr("value"),
+        useArrows: $("#use-arrows-checkbox").prop('checked')
       }
       MyScroll.run(scrollObject);
-      printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor, firefoxWidth);
+      printCode(scrollObject);
     };
 
-    function printCode(scrollWidth, newTrackColor, scrollThumbColor, scrollThumbHoverColor, firefoxWidth){
+    function printCode(scrollObject){
       var script = "<span class='base-code'>MyScroll.<span class='function'>run</span>({ </span><br>"
-      script +="<span class='base-code padding-left-15'>selector: </span>" +  "<span class='code-string'> '#your-scrollable-container'</span>, <br>",
-      script +="<span class='base-code padding-left-15'>scrollWidth: </span><span class='code-number'>" + scrollWidth + "</span>,<br>";
-      script +="<span class='base-code padding-left-15'>scrollTrackColor: </span><span class='code-color'>'"+ newTrackColor + "'</span>,<br>";
-      script +="<span class='base-code padding-left-15'>scrollThumbColor: </span><span class='code-color'>'" + scrollThumbColor+ "'</span>,<br>";
-      script +="<span class='base-code padding-left-15'>scrollThumbHoverColor: </span><span class='code-color'>'" + scrollThumbHoverColor +"'</span>,<br>";
-      script +="<span class='base-code padding-left-15'>firefoxWidth: </span><span class='code-string'>'" + firefoxWidth +"'</span><br>";
+      script +="<span class='base-code padding-left-15'>selector: </span>" +  "<span class='code-string'> '#scrollable-container'</span>, <br>",
+      script +="<span class='base-code padding-left-15'>scrollWidth: </span><span class='code-number'>" + scrollObject.scrollWidth + "</span>,<br>";
+      script +="<span class='base-code padding-left-15'>scrollTrackColor: </span><span class='code-color'>'"+ scrollObject.scrollTrackColor + "'</span>,<br>";
+      script +="<span class='base-code padding-left-15'>scrollThumbColor: </span><span class='code-color'>'" + scrollObject.scrollThumbColor+ "'</span>,<br>";
+      script +="<span class='base-code padding-left-15'>scrollThumbHoverColor: </span><span class='code-color'>'" + scrollObject.scrollThumbHoverColor +"'</span>,<br>";
+      script +="<span class='base-code padding-left-15'>firefoxWidth: </span><span class='code-string'>'" + scrollObject.firefoxWidth +"'</span><br>";
+      script +="<span class='base-code padding-left-15'>useArrows: </span><span class='code-bool'>" + scrollObject.useArrows +"</span><br>";
       script +="});";
 
       $('#example-code-block').html(script);
@@ -343,11 +346,11 @@
       $(elem).addClass("selected").addClass("secondary");
       runScroll();
     }
-
+    
     $( document ).ready(function() {
-      runScroll();
-      MyScroll.run({selector:'body'});
-      printCode(5,'#f5f5f6','#4f5b62','#000a12','auto');
+      runScroll(); //Applies default values to example scroll
+      MyScroll.run({selector:'body'}); //Applies MyScroll default values to body.
+      $("#use-arrows-checkbox-container").checkbox('setting', 'onChange', function () { runScroll() });
     });   
   </script>
 </body>

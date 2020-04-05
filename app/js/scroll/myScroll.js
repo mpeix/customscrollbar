@@ -2,6 +2,7 @@ import Browser from '../../enums/browsers';
 import {detectBrowser} from './browserUtils';
 
 const run = (options) =>{
+if(window){
   const {selector, scrollWidth, scrollTrackColor, scrollThumbColor, scrollThumbHoverColor,
     useArrows, firefoxWidth} = options;
 
@@ -26,17 +27,21 @@ const run = (options) =>{
     let css = createStylesheetString(optionsOrDefaults);   
     styleTag.appendChild(document.createTextNode(css))
     document.head.appendChild(styleTag);
+  }else
+    return new Error("Window is not defined");
 };
 
 const createStylesheetString = (options) =>{
   let styles = `
     ${options.selector}::-webkit-scrollbar{
       width:${options.scrollWidth}px;
+      border-radius:5px;
     }
     ${options.selector}::-webkit-scrollbar-track{
       background:${options.scrollTrackColor};
     }
     ${options.selector}::-webkit-scrollbar-thumb{
+      border-radius: 5px;
       background:${options.scrollThumbColor};
     }
     ${options.selector}::-webkit-scrollbar-thumb:hover{
