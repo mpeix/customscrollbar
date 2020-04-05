@@ -22,7 +22,6 @@ const outputCommonJS = (env) => ({
 });
 
 module.exports = env => {
-  console.log(env);
   return {
     mode: env.env === 'test' ? 'development' : 'production',
     devtool: env.env === 'test' ? 'inline-source-map' : false,
@@ -42,17 +41,7 @@ module.exports = env => {
               presets: ["@babel/preset-env"]
             }
           }
-        },
-        /* SASS LOADER */
-        {
-        test: /\.scss$/,
-        exclude: /(node_modules)/,
-        use: [
-            'style-loader', 
-            'css-loader',
-            'sass-loader',                        
-          ]
-        }    
+        }   
       ]
     },
     optimization: {

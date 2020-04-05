@@ -1,3 +1,25 @@
+/*WEB FONTS DEFINITION*/
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(./fonts/Ubuntu-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'Varela';
+    src: url(./fonts/Varela-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'Inconsolata';
+    src: url(./fonts/Inconsolata-Regular.ttf) format("truetype");
+}
+
+/*Cookie is used by Buy Me a Coffee*/
+@font-face {
+    font-family: 'Cookie';
+    src: url(./fonts/Cookie-Regular.ttf) format("truetype");
+}
+
+/*END -- WEB FONTS DEFINITION*/
+
 body{
     font-family: 'Varela';
     font-size: 1.15rem;
@@ -12,7 +34,7 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
 }
 a{
-    color:rgba(0,0,0,.87)
+    color:#000a12;
 }
 a:hover{
     color: #62727b;
@@ -70,7 +92,7 @@ section{
 .code-string{
     color:#008C79;
 }
-.code-number{
+.code-number, .code-bool{
     color:blue;
 }
 .code-color{
@@ -170,7 +192,9 @@ section{
     height: 38px !important;
     padding: 2px !important;
 }
-
+#use-arrows-label{
+    font-size: 1.2rem;
+}
 .other-project-links-container{
     justify-content: space-around;
     flex-wrap: wrap;
@@ -188,5 +212,9 @@ section{
 .ui.secondary.button{
     background-color: #000a12 !important;
 }
-
+.ui.toggle.checkbox input:checked~.box:before, .ui.toggle.checkbox input:checked~label:before{
+    background-color:#000a12 !important;
+}
 /************END SEMANTIC UI OVERRIDES************/
+
+

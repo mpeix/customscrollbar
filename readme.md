@@ -4,7 +4,7 @@
 
 Vist demo website here: [MyScroll](https://myscroll.peixweb.com)
 
-When you want to give custom style to a scrollbar you find that every browser have their css rules. *MyScroll* wants to help you wrinting automatically the css rules for the most used browsers.
+When you want to give custom style to a scrollbar you find that every browser have their css rules. *MyScroll* wants to help you wrinting automatically the most remarkable css rules for the most used browsers.
 
 Not all browser have scroll bar style support. I have tested the code in **Google Chrome**, **IE 11** and **Firefox**. To ask for more features or if you want to add new ones by yourself vist project repo in [Github](https://github.com/mpeix/myscroll).
 
@@ -42,8 +42,25 @@ I know that webkit and Internet Explorer allow modify more scroll style values, 
 
 ![Scroll element image]('/images/scroll_elements.jpg')
 
-**Be sure when you call *MyScroll* the window object is defined. If window object is not defined an error will be thrown.**
+__*Note:* Be sure when you call *MyScroll* the window object is defined. If window object is not defined an error will be thrown.__
 
 To understand better the elements of scrollbar that can be personalized y recomment you to check the [DEMO](https://myscroll.peixweb.com) website.
 
 
+### NO PACKAGES? Use CDN script link in your html
+
+If you prefer call MyScroll directly in your page, paste the following line in you html:
+```html
+<script src="https://cdn.peixweb.com/js/myscroll.js"></script>
+```
+In that case, you will also call run function, but refer to MyScroll object:
+```javascript
+MyScroll.run({
+        selector:'body',
+        scrollWidth: 10,
+        scrollTrackColor: '#FFF' ,
+        scrollThumbColor: '#6aab2e',
+        scrollThumbHoverColor: '#000a12' ,
+        firefoxWidth: 'thin' 
+    });
+```
