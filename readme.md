@@ -37,10 +37,10 @@ run({
         firefoxWidth: 'thin' 
     });
 ```
-The elments that *MyScroll* can modify are the ones that appear in the below image. The final result can vary depending on the browser, for example webkit browser allow to give a concrete scroll with while Firefox only admit *'thin'* and *'auto'* values.
-I know that webkit and Internet Explorer allow modify more scroll style values, I did not include that properties in the plugin to keep it simple.
+The elments that *MyScroll* can modify are the ones that appear in the below image. The final result can vary depending on browser, for example, Chrome allow you to set a concrete scroll width while Firefox only admit *'thin'* and *'auto'* values.
+I know Chrome and Internet Explorer allow modifycation of more scroll style properties, I did not include that properties in the plugin to keep it simple.
 
-![Scroll element image]('/images/scroll_elements.jpg')
+![Scroll element image](https://myscroll.peixweb.com/images/scroll_elements.jpg)
 
 __*Note:* Be sure when you call *MyScroll* the window object is defined. If window object is not defined an error will be thrown.__
 
