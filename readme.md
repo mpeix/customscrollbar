@@ -4,9 +4,9 @@
 
 Vist demo website here: [MyScroll](https://myscroll.peixweb.com)
 
-When you want to give custom style to a scrollbar you find that every browser have their css rules. *MyScroll* wants to help you wrinting automatically the most remarkable css rules for the most used browsers.
+When you want to give custom style to a scrollbar you find that every browser has their css rules. *MyScroll* wants to help you writing automatically the most remarkable css rules for the most used browsers.
 
-Not all browser have scroll bar style support. I have tested the code in **Google Chrome**, **IE 11** and **Firefox**. To ask for more features or if you want to add new ones by yourself vist project repo in [Github](https://github.com/mpeix/myscroll).
+Not all browsers have scroll bar style support. I have tested the code in **Google Chrome**, **IE 11** and **Firefox**. To ask for more features or if you want to add new ones by yourself vist project repo in [Github](https://github.com/mpeix/myscroll).
 
 ### 1 - Installation
 
@@ -23,7 +23,7 @@ npm install @mpeix/myscroll
 import {run} from '@mpeix/myscroll';
 ```
 
-### 3 - Call *run* function and get your scrollbar tunned
+### 3 - Call *run* function and get your scrollbar tuned
 
 Run function receives and options object where you can specify the scrollbar width and color.
 
@@ -37,14 +37,14 @@ run({
         firefoxWidth: 'thin' 
     });
 ```
-The elments that *MyScroll* can modify are the ones that appear in the below image. The final result can vary depending on browser, for example, Chrome allow you to set a concrete scroll width while Firefox only admit *'thin'* and *'auto'* values.
-I know Chrome and Internet Explorer allow modifycation of more scroll style properties, I did not include that properties in the plugin to keep it simple.
+The elements that *MyScroll* can modify are the ones that appear in the below image. The result can vary depending on browser, for example, Chrome allow you to set a concrete scroll width while Firefox only admit *'thin'* and *'auto'* values.
+I know Chrome and Internet Explorer allow modification  of more scroll style properties, I did not include that properties in the plugin to keep it simple.
 
 ![Scroll element image](https://myscroll.peixweb.com/images/scroll_elements.jpg)
 
 __*Note:* Be sure when you call *MyScroll* the window object is defined. If window object is not defined an error will be thrown.__
 
-To understand better the elements of scrollbar that can be personalized y recomment you to check the [DEMO](https://myscroll.peixweb.com) website.
+To understand better the elements of scrollbar that can be personalized I recommend you check the [DEMO](https://myscroll.peixweb.com) website.
 
 
 ### NO PACKAGES? Use CDN script link in your html
