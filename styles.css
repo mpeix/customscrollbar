@@ -2,24 +2,29 @@
 @font-face {
     font-family: 'Ubuntu';
     src: url(./fonts/Ubuntu-Bold.ttf) format("truetype");
+    font-display: swap;
 }
 @font-face {
     font-family: 'UbuntuLight';
     src: url(./fonts/Ubuntu-Light.ttf) format("truetype");
+    font-display: swap;
 }
 @font-face {
     font-family: 'Varela';
     src: url(./fonts/Varela-Regular.ttf) format("truetype");
+    font-display: swap;
 }
 @font-face {
     font-family: 'Inconsolata';
     src: url(./fonts/Inconsolata-Regular.ttf) format("truetype");
+    font-display: swap;
 }
 
 /*Cookie is used by Buy Me a Coffee*/
 @font-face {
     font-family: 'Cookie';
     src: url(./fonts/Cookie-Regular.ttf) format("truetype");
+    font-display: swap;
 }
 
 /*END -- WEB FONTS DEFINITION*/
