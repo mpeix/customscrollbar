@@ -29,11 +29,11 @@ body{
     font-size: 1.15rem;
 }
 
-h1,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6{
     font-family: 'Ubuntu';
 }
 
-h2{
+header h2{
     font-family:'UbuntuLight';
     font-weight: 300;
 }
@@ -51,6 +51,7 @@ a:hover{
 }
 p{
     font-size: 1.2rem;
+    text-align: justify;
 }
 header{
     text-align: center;
@@ -69,12 +70,24 @@ h1{
     font-style: italic;
 }
 #style-box{
-    height: 5vh;
+    height: 6vh;
     width: 40vw;
     background: #4f5b62;
     position: absolute;
     left: 60vw;
-    bottom: -2vh;
+    bottom: -3vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#style-box a{
+    color:white;
+    padding-left: 10px;
+}
+#style-box a:hover{
+    color:wheat;
 }
 footer{
     width: 100%;
@@ -153,6 +166,22 @@ section{
     display: flex;
 }
 
+.description p{
+    margin-bottom: 0;
+}
+
+.description-size{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.description-size a{
+    background-color: #4f5b62 !important;
+    color: white !important;
+    font-family: UbuntuLight;
+    font-weight: 300 !important;
+}
+
 .content{
     text-align: left !important;
 }
@@ -169,13 +198,24 @@ section{
     padding-bottom: 25px;
 }
 
+#html-copy-to-clipboard div{
+    display: flex;
+}
+
 #example-js-code-container, #example-code-block{
     font-size: 20px;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 450px){
+    #example-code-container{
+        padding-left:2px !important;
+        padding-right:0px !important;
+    }
     #example-js-code-container, #example-code-block{
         font-size: 15px;
+    }
+    #html-copy-to-clipboard{
+        font-size: 13px;
     }
 }
 
@@ -237,12 +277,18 @@ section{
 /************SEMANTIC UI OVERRIDES***************/
 .step{
     padding-left:0 !important;
+    padding-right:0 !important;
+    border-bottom: none !important;
 }
 .ui.secondary.button{
     background-color: #000a12 !important;
 }
 .ui.toggle.checkbox input:checked~.box:before, .ui.toggle.checkbox input:checked~label:before{
     background-color:#000a12 !important;
+}
+.ui.ordered.steps .step:before{
+    display: flex;
+    align-self: start;
 }
 /************END SEMANTIC UI OVERRIDES************/
 

@@ -19,18 +19,28 @@
     <header>
       <h1>MyScroll</h1>
       <h2>Discover <em>MyScroll</em>, an easy to use tool to customize your scrollbars</h2>
-      <div id="style-box"></div>
+      <div id="style-box">
+        <a href="https://github.com/mpeix/customscrollbar" target="_blank" rel="noopener">
+          <i class="large github icon"></i>
+        </a>
+        <a href="https://www.npmjs.com/package/@mpeix/myscroll" target="_blank" rel="noopener"> 
+          <i class="large npm icon"></i>
+        </a> 
+      </div>
     </header>
     <main>     
       <section class="ui one column grid">
         <div class="column"> 
           <p>Here, you will find a demo tool with sample snippets to make your integration with <em>MyScroll</em> fast and easy.</p>
-          <p>You can strart using <em>MyScroll</em> in only two steps</p> 
+          <p>You can strart using <em>MyScroll</em> in only two steps:</p> 
           <div id="import-steps" class="ui ordered vertical steps padding-top-10">
             <div class="step">              
               <div class="content padding-top-15">
                 <div class="description">
                   <p>Import code from cdn or take myscroll.js file and add it into your project</p>
+                  <div class="description-size">
+                    <a class="ui tag label">Only 1,8KB!</a>
+                  </div>
                 </div>
                 <div id="example-code-container" class="column ui segment">
                   <div class="ui top right attached label">
@@ -40,14 +50,22 @@
                     <em>Copy to clipboard</em>
                   </div>
                   <div id="html-copy-to-clipboard" class="code-font padding-top-25 padding-bottom-25">
-                    <span class="html-brace">&lt;</span>
-                    <span class="html-tag">script&nbsp;</span>
-                    <span class="html-attribute">src=</span>
-                    <span class="html-attribute-content">"https://cdn.peixweb.com/js/myscroll.js"</span>
-                    <span class="html-brace">&gt;</span>
-                    <span class="html-brace">&lt;</span>
-                    <span class="html-tag">/script</span>
-                    <span class="html-brace">&gt;</span>
+                    <div>
+                      <span class="html-brace">&lt;</span>
+                      <span class="html-tag">script&nbsp;</span>
+                    </div>
+                    <br>
+                    <div>
+                      <span class="html-attribute">src=</span>
+                      <span class="html-attribute-content">"https://cdn.peixweb.com/js/myscroll.js"</span>
+                      <span class="html-brace">&gt;</span>
+                    </div>
+                    <br>
+                    <div>
+                      <span class="html-brace">&lt;</span>
+                      <span class="html-tag">/script</span>
+                      <span class="html-brace">&gt;</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -171,15 +189,15 @@
                 <div class="color-selector ui vertical segment row">
                   <h3>Select scroll thumb color</h3>
                   <div class="ui input">
-                    <label class="hidden-label" for="scroll-track-thumb-color-selector">Choose scroll thumb color</label>
-                    <input id="scroll-track-thumb-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62" />
+                    <label class="hidden-label" for="scroll-thumb-color-selector">Choose scroll thumb color</label>
+                    <input id="scroll-thumb-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62" />
                   </div>
                 </div>
                 <div class="color-selector ui vertical segment row">
                   <h3>Select scroll thumb hover color</h3>
                   <div class="ui input">
-                    <label class="hidden-label" for="scroll-track-thumb-hover-color-selector">Choose scroll thumb hover color</label>
-                    <input id="scroll-track-thumb-hover-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
+                    <label class="hidden-label" for="scroll-thumb-hover-color-selector">Choose scroll thumb hover color</label>
+                    <input id="scroll-thumb-hover-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
                   </div>
                   <div class="disclaimer row">
                     <p>* <em>Scroll thumb hover color is not supported in Internet explorer and Firefox</em></p>
@@ -281,7 +299,7 @@
 
   <script src="./scripts/jquery3-4-1.min.js"></script>
   <script src="./semantic/semantic.min.js"></script>
-  <script src="./scripts/myscroll.dev.js"></script>
+  <script src="https://cdn.peixweb.com/js/myscroll.js"></script>
   <script>
     var changeElmements = document.getElementsByClassName('trigger-scroll')
     for (var i = 0; i < changeElmements.length; i++) {
@@ -289,7 +307,7 @@
     }
 
     function changeWidth(operation){
-      var element = $('#example-1-width');
+      var element = $('#scroll-bar-width-input');
       var currentValue = parseInt(element.val());
       var newValue = operation === 'add' ? currentValue + 1 : currentValue - 1;
       element.val(newValue);
@@ -299,10 +317,10 @@
     function runScroll(){
       var scrollObject = {
         selector: '#scroll-container-example-1',
-        scrollWidth: $('#example-1-width').val(),
-        scrollTrackColor: $('#example-scroll-track-color').val(),
-        scrollThumbColor: $('#example-scroll-thumb-color').val(),
-        scrollThumbHoverColor: $('#example-scroll-thumb-hover-color').val(),
+        scrollWidth: $('#scroll-bar-width-input').val(),
+        scrollTrackColor: $('#scroll-track-color-selector').val(),
+        scrollThumbColor: $('#scroll-thumb-color-selector').val(),
+        scrollThumbHoverColor: $('#scroll-thumb-hover-color-selector').val(),
         firefoxWidth: $(".firefox-width-button.selected").attr("value") === undefined ? 'auto' : $(".firefox-width-button.selected").attr("value"),
         useArrows: $("#use-arrows-checkbox").prop('checked')
       }
