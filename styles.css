@@ -4,6 +4,10 @@
     src: url(./fonts/Ubuntu-Bold.ttf) format("truetype");
 }
 @font-face {
+    font-family: 'UbuntuLight';
+    src: url(./fonts/Ubuntu-Light.ttf) format("truetype");
+}
+@font-face {
     font-family: 'Varela';
     src: url(./fonts/Varela-Regular.ttf) format("truetype");
 }
@@ -25,14 +29,20 @@ body{
     font-size: 1.15rem;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h3,h4,h5,h6{
     font-family: 'Ubuntu';
+}
+
+h2{
+    font-family:'UbuntuLight';
+    font-weight: 300;
 }
 
 .flex-center{
     display: flex;
     justify-content: center;
 }
+
 a{
     color:#000a12;
 }
@@ -44,11 +54,28 @@ p{
 }
 header{
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 20px;
+    background: #000a12;
+    color: white;
+    position: relative;
 }
 
+h1{
+    text-align: left;
+    font-size: 3rem;
+    text-transform: lowercase;
+    font-style: italic;
+}
+#style-box{
+    height: 5vh;
+    width: 40vw;
+    background: #4f5b62;
+    position: absolute;
+    left: 60vw;
+    bottom: -2vh;
+}
 footer{
     width: 100%;
     margin-top: 60px;
@@ -117,7 +144,9 @@ section{
     background-color: #F5F5F6;
 }
 /*----END CODE HIGHLIGHT utilities---*/
-
+.hidden-label{
+    display: none;
+}
 /*************************END Commont styles/*************************/
 #import-steps{
     border: none;

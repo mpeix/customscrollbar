@@ -49,7 +49,7 @@ To understand better the elements of scrollbar that can be personalized I recomm
 
 ### NO PACKAGES? Use CDN script link in your html
 
-If you prefer call MyScroll directly in your page, paste the following line in you html:
+If you prefer call *MyScroll* directly in your page, paste the following line in you html:
 ```html
 <script src="https://cdn.peixweb.com/js/myscroll.js"></script>
 ```

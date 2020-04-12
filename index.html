@@ -8,16 +8,18 @@
   <meta name="description" content="Javascript MyScroll Utility. Customize your scrollbar withd this easy to use pluggin.">
   <meta name="author" content="Miquel Peix">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css">
+  <link rel="canonical" href="https://myscroll.peixweb.com" />
+  <link rel="stylesheet" type="text/css" href="./semantic/semantic.min.css" />
   <!--The following tas is the style from buymeacoffee-->
   <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
 </head>
 
 <body>
     <header>
       <h1>MyScroll</h1>
       <h2>Discover <em>MyScroll</em>, an easy to use tool to customize your scrollbars</h2>
+      <div id="style-box"></div>
     </header>
     <main>     
       <section class="ui one column grid">
@@ -89,7 +91,7 @@
             <h3>Usage with javascript modules</h3>
             <p>Are you using javascript modules?, check documentation in 
               <u>
-                <a href="https://www.npmjs.com/package/@mpeix/myscroll"> 
+                <a href="https://www.npmjs.com/package/@mpeix/myscroll" target="_blank" rel="noopener"> 
                   <i class="npm big icon"></i>
                   page here.
                 </a> 
@@ -137,13 +139,14 @@
                 <div class="ui vertical segment row">
                   <h3>Set scroll bar witdh</h3>
                   <div id="example-1-width-container" class="ui right labeled input">
-                    <input class="trigger-scroll" type="number" id="example-1-width" value="5">
+                    <label class="hidden-label" for="scroll-bar-width-input">Set scrollbar width</label>
+                    <input id="scroll-bar-width-input" class="trigger-scroll" type="number" id="example-1-width" value="5">
                     <div class="ui basic label"><p>px</p></div>
                   </div>
-                  <button id="e1-minus-width" class="ui circular basic icon button" onclick="changeWidth('substract')">
+                  <button id="e1-minus-width" class="ui circular basic icon button" aria-label="minus" onclick="changeWidth('substract')">
                       <i class="minus icon"></i>
                   </button>
-                  <button id="e1-plus-width" class="ui circular basic icon button" onclick="changeWidth('add')">
+                  <button id="e1-plus-width" class="ui circular basic icon button" aria-label="add" onclick="changeWidth('add')">
                     <i class="plus icon pointing label"></i>
                   </button>
                   <div class="padding-top-25">
@@ -161,19 +164,22 @@
                 <div class="color-selector ui vertical segment row">
                   <h3>Select scrollbar color</h3>
                   <div class="ui input">
-                    <input class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6" />
+                    <label class="hidden-label" for="scroll-track-color-selector">Choose scroll track color</label>
+                    <input id="scroll-track-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6" />
                   </div>
                 </div>
                 <div class="color-selector ui vertical segment row">
                   <h3>Select scroll thumb color</h3>
                   <div class="ui input">
-                    <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62" />
+                    <label class="hidden-label" for="scroll-track-thumb-color-selector">Choose scroll thumb color</label>
+                    <input id="scroll-track-thumb-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62" />
                   </div>
                 </div>
                 <div class="color-selector ui vertical segment row">
                   <h3>Select scroll thumb hover color</h3>
                   <div class="ui input">
-                    <input class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
+                    <label class="hidden-label" for="scroll-track-thumb-hover-color-selector">Choose scroll thumb hover color</label>
+                    <input id="scroll-track-thumb-hover-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
                   </div>
                   <div class="disclaimer row">
                     <p>* <em>Scroll thumb hover color is not supported in Internet explorer and Firefox</em></p>
@@ -209,7 +215,7 @@
             <p>If you want to report some bug, ask for new fucntionality or add yourself new features, please access here to Github repo.</p>
             <br>
             <div class="flex-center">
-              <a href="https://github.com/mpeix/customscrollbar" target="_blank">
+              <a href="https://github.com/mpeix/customscrollbar" target="_blank" rel="noopener">
                 <i class="big github icon"></i>
               </a>
             </div>
@@ -247,7 +253,10 @@
             <br>
             <div class="flex-center">
               <div>
-                <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/miquelpeix"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span></a>
+                <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/miquelpeix" rel="noopener">
+                  <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+                  <span style="margin-left:15px;font-size:28px !important;">Buy me a coffee</span>
+                </a>
               </div>
             </div>
           </div>
@@ -256,16 +265,16 @@
            
   </main>
   <footer class="flex-center">
-    <a class="pointer" href="https://peixweb.com/" target="_blank">
+    <a class="pointer" href="https://peixweb.com/" target="_blank" rel="noopener">
       <i class="circular user icon"></i>
     </a>
-    <a class="pointer" href="https://github.com/mpeix" target="_blank">
+    <a class="pointer" href="https://github.com/mpeix" target="_blank" rel="noopener">
       <i class="circular github icon"></i>
     </a>
-    <a class="pointer" href="https://es.linkedin.com/in/miquelpeixtarres" target="_blank">
+    <a class="pointer" href="https://es.linkedin.com/in/miquelpeixtarres" target="_blank" rel="noopener">
       <i class="circular linkedin icon"></i>
     </a>
-    <a class="pointer" href="https://www.xing.com/profile/Miquel_PeixTarres" target="_blank">
+    <a class="pointer" href="https://www.xing.com/profile/Miquel_PeixTarres" target="_blank" rel="noopener">
       <i class="circular xing icon"></i>
     </a>
   </footer>

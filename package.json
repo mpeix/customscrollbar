@@ -1,6 +1,6 @@
 {
   "name": "@mpeix/myscroll",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MyScroll, an easy to use tool to customize your scrollbars",
   "main": "scripts/main.js",
   "repository": {
