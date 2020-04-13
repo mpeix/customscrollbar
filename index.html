@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Scroll - Demo page</title>
-  <meta name="description" content="Javascript MyScroll Utility. Customize your scrollbar withd this easy to use pluggin.">
+  <title>My Scroll. Customize your scroll bar style</title>
+  <meta name="description" content="MyScroll, Customize your scroll bar style. MyScroll is a javascript pluggin, that allows you to change the style of your scrollbar. It has multiple browser support">
   <meta name="author" content="Miquel Peix">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://myscroll.peixweb.com" />
@@ -30,14 +30,18 @@
     </header>
     <main>     
       <section class="ui one column grid">
-        <div class="column"> 
+        <div class="segment column">
           <p>Here, you will find a demo tool with sample snippets to make your integration with <em>MyScroll</em> fast and easy.</p>
-          <p>You can strart using <em>MyScroll</em> in only two steps:</p> 
-          <div id="import-steps" class="ui ordered vertical steps padding-top-10">
+          <p>You can install <em>MyScroll</em> in you project as any npm Module, or if your prefer you can directly include <em>MyScroll</em> script in your Html page.</p>
+        </div>
+        <div class="column"> 
+          <h3>Include in your html</h3>
+          <p class="margin-bottom-0">To include <em>MyScroll</em> in your HTML page you only need two steps:</p> 
+          <div id="import-steps" class="ui ordered vertical steps">
             <div class="step">              
-              <div class="content padding-top-15">
+              <div class="content padding-top-10">
                 <div class="description">
-                  <p>Import code from cdn or take myscroll.js file and add it into your project</p>
+                  <p class="margin-bottom-0">Import code from cdn or take myscroll.js file and add it into your project</p>
                   <div class="description-size">
                     <a class="ui tag label">Only 1,8KB!</a>
                   </div>
@@ -71,7 +75,7 @@
               </div>
             </div>
             <div class="step">              
-              <div class="content padding-top-15">
+              <div class="content padding-top-10">
                 <div class="description">
                   <p>To customize an scroll bar simply type MyScroll.run inside script tag in your html document.
                   run function receive an options object, you will need to fill it with desired values.</p>
@@ -145,7 +149,7 @@
 
       <div id="generator-section-container">
         <section class="ui one column grid">
-            <h2>Script generator tool</h2>
+            <h3>Script generator tool</h3>
             <div class="column">
                 <div id="scroll-container-example-1" class='scrollable-container ui segment row'>
                     <div class="scrollable-content flex-center padding-top-15">
@@ -155,7 +159,7 @@
                     </div>                
                 </div>
                 <div class="ui vertical segment row">
-                  <h3>Set scroll bar witdh</h3>
+                  <h4>Set scroll bar witdh</h4>
                   <div id="example-1-width-container" class="ui right labeled input">
                     <input id="scroll-bar-width-input" class="trigger-scroll" type="number" id="example-1-width" value="5">
                     <label class="hidden-label" for="scroll-bar-width-input">Set scrollbar width</label>
@@ -168,7 +172,7 @@
                     <i class="plus icon pointing label"></i>
                   </button>
                   <div class="padding-top-25">
-                    <h4>Need Firefox support?</h4>
+                    <h5>Need Firefox support?</h5>
                     <p>Firefox only admit <em>'thin'</em> or <em>'auto'</em> values to personalize scroll width. Choose which you prefer</p>
                     <div class="ui buttons">
                       <button class="tiny ui button firefox-width-button" value="thin" onclick="firefoxButtonWidthSelected(this)">Thin</button>
@@ -180,21 +184,21 @@
                   </div>
                 </div>
                 <div class="color-selector ui vertical segment row">
-                  <h3>Select scrollbar color</h3>
+                  <h4>Select scrollbar color</h4>
                   <div class="ui input">
                     <input id="scroll-track-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-track-color" value="#f5f5f6" />
                     <label class="hidden-label" for="scroll-track-color-selector">Choose scroll track color</label>
                   </div>
                 </div>
                 <div class="color-selector ui vertical segment row">
-                  <h3>Select scroll thumb color</h3>
+                  <h4>Select scroll thumb color</h4>
                   <div class="ui input">
                     <input id="scroll-thumb-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-color" value="#4f5b62" />
                     <label class="hidden-label" for="scroll-thumb-color-selector">Choose scroll thumb color</label>
                   </div>
                 </div>
                 <div class="color-selector ui vertical segment row">
-                  <h3>Select scroll thumb hover color</h3>
+                  <h4>Select scroll thumb hover color</h4>
                   <div class="ui input">
                     <input id="scroll-thumb-hover-color-selector" class="trigger-scroll color-input" type="color" id="example-scroll-thumb-hover-color" value="#000a12" />
                     <label class="hidden-label" for="scroll-thumb-hover-color-selector">Choose scroll thumb hover color</label>
@@ -204,7 +208,7 @@
                   </div>
                 </div>
                 <div class="ui vertical segment row">
-                  <h3>Use scrollbar arrows</h3>
+                  <h4>Use scrollbar arrows</h4>
                   <div id="use-arrows-checkbox-container" class="ui toggle checkbox">
                     <input id="use-arrows-checkbox" name="privacy" type="checkbox">
                     <label id="use-arrows-label">Use arrows</label>
@@ -265,9 +269,9 @@
       </section>
       <section class="ui one column grid">
         <div class="column">
-          <div class="ui olive segment row">
+          <div class="ui olive segment row cup-of-coffee-container">
             <h3>Did you like my work?</h3>
-            <p>Consider supporting me buying a cup on coffee</p>
+            <p>Consider supporting me buying a cup of coffee</p>
             <br>
             <div class="flex-center">
               <div>

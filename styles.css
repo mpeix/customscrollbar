@@ -43,6 +43,10 @@ header h2{
     font-weight: 300;
 }
 
+h3{
+    font-size: 2rem;
+}
+
 .flex-center{
     display: flex;
     justify-content: center;
@@ -71,7 +75,6 @@ header{
 h1{
     text-align: left;
     font-size: 3rem;
-    text-transform: lowercase;
     font-style: italic;
 }
 #style-box{
@@ -119,6 +122,9 @@ section{
 .padding-left-45{
     padding-left: 45px;
 }
+.padding-top-10{
+    padding-top: 10px;
+}
 .padding-top-15{
     padding-top: 15px;
 }
@@ -127,6 +133,9 @@ section{
 }
 .padding-bottom-25{
     padding-bottom: 25px;
+}
+.margin-bottom-0{
+    margin-bottom: 0;
 }
 /*-----END Padding utilities--------*/
 
@@ -169,10 +178,7 @@ section{
 #import-steps{
     border: none;
     display: flex;
-}
-
-.description p{
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .description-size{
@@ -279,6 +285,9 @@ section{
     font-family: cursive;
     color: #4f5b62;
 }
+.cup-of-coffee-container h3{
+    font-size: 1.3rem;
+}
 /************SEMANTIC UI OVERRIDES***************/
 .step{
     padding-left:0 !important;
@@ -294,6 +303,7 @@ section{
 .ui.ordered.steps .step:before{
     display: flex;
     align-self: start;
+    font-size: 1.5rem;
 }
 /************END SEMANTIC UI OVERRIDES************/
 
